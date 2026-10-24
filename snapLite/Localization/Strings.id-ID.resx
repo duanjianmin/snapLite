@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActionsToolbarWindow_Close" xml:space="preserve">
+    <value>Tutup</value>
+  </data>
+  <data name="ApplicationSettingsWindow_AdvancedHotkeys" xml:space="preserve">
+    <value>Tombol pintas</value>
+  </data>
+  <data name="ApplicationSettingsWindow_BottomLeft" xml:space="preserve">
+    <value>Kiri bawah</value>
+  </data>
+  <data name="ApplicationSettingsWindow_BottomRight" xml:space="preserve">
+    <value>Kanan bawah</value>
+  </data>
+  <data name="ApplicationSettingsWindow_Browse" xml:space="preserve">
+    <value>Jelajahi...</value>
+  </data>
+  <data name="ApplicationSettingsWindow_ScreenshotsFolder" xml:space="preserve">
+    <value>Folder tangkapan layar</value>
+  </data>
+  <data name="ApplicationSettingsWindow_Settings" xml:space="preserve">
+    <value>Pengaturan</value>
+  </data>
+  <data name="ApplicationSettingsWindow_TopLeft" xml:space="preserve">
+    <value>Kiri atas</value>
+  </data>
+  <data name="ApplicationSettingsWindow_TopRight" xml:space="preserve">
+    <value>Kanan atas</value>
+  </data>
+  <data name="AutoCaptureWindow_Seconds" xml:space="preserve">
+    <value>detik</value>
+  </data>
+  <data name="Lite_AppName" xml:space="preserve">
+    <value>snapLite</value>
+  </data>
+  <data name="Lite_ClickToOpen" xml:space="preserve">
+    <value>Klik untuk membuka</value>
+  </data>
+  <data name="Lite_HotkeyInUse" xml:space="preserve">
+    <value>digunakan oleh aplikasi lain</value>
+  </data>
+  <data name="Lite_HotkeyPrompt" xml:space="preserve">
+    <value>Tekan kombinasi tombol...</value>
+  </data>
+  <data name="Lite_RecorderOptionsHint" xml:space="preserve">
+    <value>Audio, kamera, kualitas, dan opsi perekaman lainnya ada di bilah alat yang muncul sebelum merekam.</value>
+  </data>
+  <data name="Lite_RecordingSaved" xml:space="preserve">
+    <value>Rekaman disimpan</value>
+  </data>
+  <data name="Lite_RegionAnnotations" xml:space="preserve">
+    <value>Beri anotasi setelah memilih area</value>
+  </data>
+  <data name="Lite_RunningInTray" xml:space="preserve">
+    <value>snapLite berjalan di area notifikasi.</value>
+  </data>
+  <data name="Lite_ScreenshotCopied" xml:space="preserve">
+    <value>Tangkapan layar disalin ke papan klip</value>
+  </data>
+  <data name="Lite_ScreenshotSaved" xml:space="preserve">
+    <value>Tangkapan layar disimpan</value>
+  </data>
+  <data name="Lite_ShowNotification" xml:space="preserve">
+    <value>Tampilkan notifikasi setelah menangkap</value>
+  </data>
+  <data name="MainMenuBuilder_Capture" xml:space="preserve">
+    <value>Ambil</value>
+  </data>
+  <data name="MainMenuBuilder_Exit" xml:space="preserve">
+    <value>Keluar</value>
+  </data>
+  <data name="MainMenuBuilder_Open" xml:space="preserve">
+    <value>Buka</value>
+  </data>
+  <data name="MainMenuBuilder_ShowCursor" xml:space="preserve">
+    <value>Tampilkan kursor</value>
+  </data>
+  <data name="MouseHighlighter" xml:space="preserve">
+    <value>Penyorot mouse</value>
+  </data>
+  <data name="MouseHighlighter_AlwaysColor" xml:space="preserve">
+    <value>Selalu sorot warna:</value>
+  </data>
+  <data name="MouseHighlighter_AlwaysColorHelp" xml:space="preserve">
+    <value>Gunakan warna transparan untuk menonaktifkan sorotan persisten.</value>
+  </data>
+  <data name="MouseHighlighter_AutoActivate" xml:space="preserve">
+    <value>Aktif secara otomatis ketika snapLite dimulai</value>
+  </data>
+  <data name="MouseHighlighter_Circle" xml:space="preserve">
+    <value>Sorotan lingkaran</value>
+  </data>
+  <data name="MouseHighlighter_FadeDelay" xml:space="preserve">
+    <value>Penundaan pudar (ms):</value>
+  </data>
+  <data name="MouseHighlighter_FadeDuration" xml:space="preserve">
+    <value>Durasi pudar (ms):</value>
+  </data>
+  <data name="MouseHighlighter_FollowCursor" xml:space="preserve">
+    <value>Ikuti kursor saat tombol ditahan</value>
+  </data>
+  <data name="MouseHighlighter_KeepAfterRecording" xml:space="preserve">
+    <value>Terus sorot setelah merekam</value>
+  </data>
+  <data name="MouseHighlighter_MiddleColor" xml:space="preserve">
+    <value>Warna tombol tengah:</value>
+  </data>
+  <data name="MouseHighlighter_MiddleReleaseCrosshairs" xml:space="preserve">
+    <value>Tampilkan garis bidik pada pelepasan tombol tengah</value>
+  </data>
+  <data name="MouseHighlighter_Mode" xml:space="preserve">
+    <value>Modus sorotan:</value>
+  </data>
+  <data name="MouseHighlighter_PrimaryColor" xml:space="preserve">
+    <value>Warna tombol utama:</value>
+  </data>
+  <data name="MouseHighlighter_PrimaryReleaseCrosshairs" xml:space="preserve">
+    <value>Tampilkan garis bidik pada pelepasan tombol utama</value>
+  </data>
+  <data name="MouseHighlighter_Radius" xml:space="preserve">
+    <value>Jari-jari (px):</value>
+  </data>
+  <data name="MouseHighlighter_RecordingHelp" xml:space="preserve">
+    <value>Untuk menyorot klik dalam rekaman, aktifkan opsi penyorot mouse di Pengaturan tugas → Tangkap → Perekam layar.</value>
+  </data>
+  <data name="MouseHighlighter_ReleaseCrosshairs" xml:space="preserve">
+    <value>Tampilkan garis bidik pada pelepasan tombol sekunder</value>
+  </data>
+  <data name="MouseHighlighter_Ripple" xml:space="preserve">
+    <value>riak</value>
+  </data>
+  <data name="MouseHighlighter_RippleDuration" xml:space="preserve">
+    <value>Durasi riak (ms):</value>
+  </data>
+  <data name="MouseHighlighter_RippleIntensity" xml:space="preserve">
+    <value>Intensitas riak:</value>
+  </data>
+  <data name="MouseHighlighter_RippleSize" xml:space="preserve">
+    <value>Ukuran riak (px):</value>
+  </data>
+  <data name="MouseHighlighter_SecondaryColor" xml:space="preserve">
+    <value>Warna tombol sekunder:</value>
+  </data>
+  <data name="MouseHighlighter_Start" xml:space="preserve">
+    <value>Mulai menyorot</value>
+  </data>
+  <data name="MouseHighlighter_StartFailed" xml:space="preserve">
+    <value>Tidak dapat memulai penyorotan mouse.</value>
+  </data>
+  <data name="MouseHighlighter_Stop" xml:space="preserve">
+    <value>Berhenti menyorot</value>
+  </data>
+  <data name="MouseHighlighter_StopAfterRecording" xml:space="preserve">
+    <value>Berhenti menyorot saat perekaman berhenti</value>
+  </data>
+  <data name="MouseHighlighter_Title" xml:space="preserve">
+    <value>Penyorot mouse</value>
+  </data>
+  <data name="ScreenRecorderBar_Bar" xml:space="preserve">
+    <value>Bilah</value>
+  </data>
+  <data name="ScreenRecorderBar_Camera" xml:space="preserve">
+    <value>Kamera</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreview" xml:space="preserve">
+    <value>Pratinjau kamera</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreviewOff" xml:space="preserve">
+    <value>Kamera nonaktif. Aktifkan untuk menampilkannya dalam rekaman.</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreviewStarting" xml:space="preserve">
+    <value>Memulai kamera...</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreviewUnavailable" xml:space="preserve">
+    <value>Pratinjau kamera tidak tersedia</value>
+  </data>
+  <data name="ScreenRecorderBar_Capture" xml:space="preserve">
+    <value>Pengambilan</value>
+  </data>
+  <data name="ScreenRecorderBar_Cursor" xml:space="preserve">
+    <value>Kursor</value>
+  </data>
+  <data name="ScreenRecorderBar_LayoutPreview" xml:space="preserve">
+    <value>Pratinjau tata letak</value>
+  </data>
+  <data name="ScreenRecorderBar_Microphone" xml:space="preserve">
+    <value>Mikrofon</value>
+  </data>
+  <data name="ScreenRecorderBar_Off" xml:space="preserve">
+    <value>Nonaktif</value>
+  </data>
+  <data name="ScreenRecorderBar_On" xml:space="preserve">
+    <value>Aktif</value>
+  </data>
+  <data name="ScreenRecorderBar_Options" xml:space="preserve">
+    <value>Opsi</value>
+  </data>
+  <data name="ScreenRecorderBar_Overlay" xml:space="preserve">
+    <value>Hamparan</value>
+  </data>
+  <data name="ScreenRecorderBar_Record" xml:space="preserve">
+    <value>Rekam</value>
+  </data>
+  <data name="ScreenRecorderBar_RefreshDevices" xml:space="preserve">
+    <value>Segarkan perangkat</value>
+  </data>
+  <data name="ScreenRecorderBar_ShowBeforeRecording" xml:space="preserve">
+    <value>Tampilkan bilah sebelum merekam</value>
+  </data>
+  <data name="ScreenRecorderBar_SourceOptions" xml:space="preserve">
+    <value>Opsi {0}</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay" xml:space="preserve">
+    <value>Penundaan mulai</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_1Second" xml:space="preserve">
+    <value>1 detik</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_2Seconds" xml:space="preserve">
+    <value>2 detik</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_3Seconds" xml:space="preserve">
+    <value>3 detik</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_4Seconds" xml:space="preserve">
+    <value>4 detik</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_5Seconds" xml:space="preserve">
+    <value>5 detik</value>
+  </data>
+  <data name="ScreenRecorderBar_SystemAudio" xml:space="preserve">
+    <value>Audio sistem</value>
+  </data>
+  <data name="ScreenRecorderBar_TargetUnavailable" xml:space="preserve">
+    <value>Jendela yang dipilih untuk direkam tidak lagi tersedia.</value>
+  </data>
+  <data name="ScreenRecorderBar_Volume" xml:space="preserve">
+    <value>Volume rekaman (%)</value>
+  </data>
+  <data name="TaskSettingsWindow_Cancel" xml:space="preserve">
+    <value>Batal</value>
+  </data>
+  <data name="TaskSettingsWindow_DurationSeconds" xml:space="preserve">
+    <value>Durasi (detik):</value>
+  </data>
+  <data name="TaskSettingsWindow_GIFFPS" xml:space="preserve">
+    <value>FPS GIF:</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorder" xml:space="preserve">
+    <value>Perekam layar bawaan</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderBitrate" xml:space="preserve">
+    <value>Laju bit video (kbps):</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Circle" xml:space="preserve">
+    <value>Lingkaran</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_DefaultDevice" xml:space="preserve">
+    <value>Kamera pertama yang tersedia</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Ellipse" xml:space="preserve">
+    <value>Elips</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_FPS" xml:space="preserve">
+    <value>FPS kamera:</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Margin" xml:space="preserve">
+    <value>Margin (piksel):</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_NoDevices" xml:space="preserve">
+    <value>Tidak ada kamera yang terdeteksi</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Rectangle" xml:space="preserve">
+    <value>Persegi panjang</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Resolution" xml:space="preserve">
+    <value>Resolusi tangkapan:</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_RoundedRectangle" xml:space="preserve">
+    <value>Persegi panjang membulat</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Shape" xml:space="preserve">
+    <value>Bentuk:</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Square" xml:space="preserve">
+    <value>Persegi</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_UnavailableDevice" xml:space="preserve">
+    <value>Kamera tidak tersedia</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Width" xml:space="preserve">
+    <value>Lebar (% rekaman):</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderDefaultMicrophone" xml:space="preserve">
+    <value>Mikrofon bawaan</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderDefaultSystemAudioDevice" xml:space="preserve">
+    <value>Perangkat keluaran bawaan</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderUnavailableMicrophone" xml:space="preserve">
+    <value>Mikrofon tidak tersedia</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderUnavailableSystemAudioDevice" xml:space="preserve">
+    <value>Perangkat keluaran tidak tersedia</value>
+  </data>
+  <data name="TaskSettingsWindow_Placement" xml:space="preserve">
+    <value>Penempatan:</value>
+  </data>
+  <data name="TaskSettingsWindow_Recording" xml:space="preserve">
+    <value>Perekaman</value>
+  </data>
+  <data name="TaskSettingsWindow_ScreenRecordingFPS" xml:space="preserve">
+    <value>FPS perekaman layar:</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowRecordingButtonLabels" xml:space="preserve">
+    <value>Tampilkan label tombol perekaman</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowRecordingTimer" xml:space="preserve">
+    <value>Tampilkan pengatur waktu perekaman</value>
+  </data>
+  <data name="TaskSettingsWindow_UseFixedDuration" xml:space="preserve">
+    <value>Gunakan durasi tetap</value>
+  </data>
+</root>

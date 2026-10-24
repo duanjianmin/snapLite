@@ -1,0 +1,140 @@
+﻿#region License Information (GPL v3)
+
+/*
+    ShareX - A program that allows you to take screenshots and share any file type
+    Copyright (c) 2007-2026 ShareX Team
+
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of the GNU General Public License
+    as published by the Free Software Foundation; either version 2
+    of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+    Optionally you can also view the license at <http://www.gnu.org/licenses/>.
+*/
+
+#endregion License Information (GPL v3)
+
+using SkiaSharp;
+using System;
+using System.Drawing;
+using System.IO;
+
+namespace ShareX.HelpersLib
+{
+    public class AnimatedGifCreator : IDisposable
+    {
+        public string FilePath { get; private set; }
+        public int Delay { get; private set; }
+        public int Repeat { get; private set; }
+        public bool Loop { get; private set; }
+        public int FrameCount { get; private set; }
+        /// <summary>Store the first frame's palette globally and reuse it for matching frames.</summary>
+        public bool UseGlobalPalette { get; init; }
+
+        private FileStream stream;
+        private Color[] globalPalette;
+
+        public AnimatedGifCreator(string filePath, int delay, int repeat = 0, bool loop = true)
+        {
+            FilePath = filePath;
+            Delay = delay;
+            Repeat = repeat;
+            Loop = loop;
+        }
+
+        public void AddFrame(string path, GIFQuality quality = GIFQuality.Adaptive)
+        {
+            using (SKBitmap bmp = SkiaImageHelpers.LoadImage(path))
+            {
+                AddFrame(bmp, quality);
+            }
+        }
+
+        public void AddFrame(SKBitmap bitmap, GIFQuality quality = GIFQuality.Adaptive)
+            => AddFrame(bitmap, Delay, quality);
+
+        public void AddFrame(SKBitmap bitmap, int delay, GIFQuality quality = GIFQuality.Adaptive)
+            => AddFrame(SkiaImageHelpers.Quantize(bitmap, quality), delay);
+
+        public void AddFrame(IndexedImage image) => AddFrame(image, Delay);
+
+        public void AddFrame(IndexedImage image, int delay)
+            => AddFrame(image, delay, 0, 0);
+
+        /// <summary>Adds a frame at an offset. Disable background restoration to preserve the canvas between partial updates.</summary>
+        public void AddFrame(IndexedImage image, int delay, int left, int top, bool restoreBackground = true)
+            => AddFrame(image, delay, left, top, restoreBackground, null);
+
+        /// <summary>Overrides this frame's transparent index without changing the shared palette's colors.</summary>
+        public void AddFrame(IndexedImage image, int delay, int left, int top, bool restoreBackground, int? transparentIndex)
+        {
+            if (stream == null)
+            {
+                globalPalette = UseGlobalPalette ? (Color[])image.Palette.Clone() : null;
+                stream = new FileStream(FilePath, FileMode.Create, FileAccess.Write, FileShare.Read);
+                image.WriteHeader(stream, UseGlobalPalette);
+                if (Loop) stream.Write(CreateApplicationExtensionBlock(Repeat));
+            }
+            image.WriteFrame(stream, delay, left, top, restoreBackground, MatchesGlobalPalette(image.Palette), transparentIndex);
+            FrameCount++;
+        }
+
+        private bool MatchesGlobalPalette(Color[] palette)
+        {
+            if (globalPalette == null || palette.Length != globalPalette.Length) return false;
+            for (int index = 0; index < palette.Length; index++)
+                if ((palette[index].ToArgb() & 0xFFFFFF) != (globalPalette[index].ToArgb() & 0xFFFFFF)) return false;
+            return true;
+        }
+
+        private void Finish()
+        {
+            if (stream != null)
+            {
+                stream.WriteByte(0x3B); // Image terminator
+                stream.Dispose();
+                stream = null;
+            }
+        }
+
+        public void Dispose()
+        {
+            Finish();
+        }
+
+        private byte[] CreateApplicationExtensionBlock(int repeat)
+        {
+            byte[] buffer = new byte[19];
+            buffer[0] = 0x21; // Extension introducer
+            buffer[1] = 0xFF; // Application extension
+            buffer[2] = 0x0B; // Size of block
+            buffer[3] = (byte)'N'; // NETSCAPE2.0
+            buffer[4] = (byte)'E';
+            buffer[5] = (byte)'T';
+            buffer[6] = (byte)'S';
+            buffer[7] = (byte)'C';
+            buffer[8] = (byte)'A';
+            buffer[9] = (byte)'P';
+            buffer[10] = (byte)'E';
+            buffer[11] = (byte)'2';
+            buffer[12] = (byte)'.';
+            buffer[13] = (byte)'0';
+            buffer[14] = 0x03; // Size of block
+            buffer[15] = 0x01; // Loop indicator
+            buffer[16] = (byte)(repeat % 0x100); // Number of repetitions
+            buffer[17] = (byte)(repeat / 0x100); // 0 for endless loop
+            buffer[18] = 0x00; // Block terminator
+            return buffer;
+        }
+
+    }
+}

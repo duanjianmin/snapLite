@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActionsToolbarWindow_Close" xml:space="preserve">
+    <value>बंद करें</value>
+  </data>
+  <data name="ApplicationSettingsWindow_AdvancedHotkeys" xml:space="preserve">
+    <value>हॉटकी</value>
+  </data>
+  <data name="ApplicationSettingsWindow_BottomLeft" xml:space="preserve">
+    <value>नीचे बायाँ</value>
+  </data>
+  <data name="ApplicationSettingsWindow_BottomRight" xml:space="preserve">
+    <value>नीचे दायाँ</value>
+  </data>
+  <data name="ApplicationSettingsWindow_Browse" xml:space="preserve">
+    <value>ब्राउज़ करें...</value>
+  </data>
+  <data name="ApplicationSettingsWindow_ScreenshotsFolder" xml:space="preserve">
+    <value>स्क्रीनशॉट फ़ोल्डर</value>
+  </data>
+  <data name="ApplicationSettingsWindow_Settings" xml:space="preserve">
+    <value>सेटिंग</value>
+  </data>
+  <data name="ApplicationSettingsWindow_TopLeft" xml:space="preserve">
+    <value>ऊपर बायाँ</value>
+  </data>
+  <data name="ApplicationSettingsWindow_TopRight" xml:space="preserve">
+    <value>ऊपर दायाँ</value>
+  </data>
+  <data name="AutoCaptureWindow_Seconds" xml:space="preserve">
+    <value>सेकंड</value>
+  </data>
+  <data name="Lite_AppName" xml:space="preserve">
+    <value>snapLite</value>
+  </data>
+  <data name="Lite_ClickToOpen" xml:space="preserve">
+    <value>खोलने के लिए क्लिक करें</value>
+  </data>
+  <data name="Lite_HotkeyInUse" xml:space="preserve">
+    <value>किसी अन्य ऐप द्वारा उपयोग में</value>
+  </data>
+  <data name="Lite_HotkeyPrompt" xml:space="preserve">
+    <value>कोई कुंजी संयोजन दबाएँ...</value>
+  </data>
+  <data name="Lite_RecorderOptionsHint" xml:space="preserve">
+    <value>ऑडियो, कैमरा, गुणवत्ता और अन्य रिकॉर्डिंग विकल्प रिकॉर्डिंग से पहले दिखने वाले टूलबार में हैं।</value>
+  </data>
+  <data name="Lite_RecordingSaved" xml:space="preserve">
+    <value>रिकॉर्डिंग सहेजी गई</value>
+  </data>
+  <data name="Lite_RegionAnnotations" xml:space="preserve">
+    <value>क्षेत्र चुनने के बाद एनोटेट करें</value>
+  </data>
+  <data name="Lite_RunningInTray" xml:space="preserve">
+    <value>snapLite सूचना क्षेत्र में चल रहा है।</value>
+  </data>
+  <data name="Lite_ScreenshotCopied" xml:space="preserve">
+    <value>स्क्रीनशॉट क्लिपबोर्ड पर कॉपी किया गया</value>
+  </data>
+  <data name="Lite_ScreenshotSaved" xml:space="preserve">
+    <value>स्क्रीनशॉट सहेजा गया</value>
+  </data>
+  <data name="Lite_ShowNotification" xml:space="preserve">
+    <value>कैप्चर के बाद सूचना दिखाएँ</value>
+  </data>
+  <data name="MainMenuBuilder_Capture" xml:space="preserve">
+    <value>कैप्चर करें</value>
+  </data>
+  <data name="MainMenuBuilder_Exit" xml:space="preserve">
+    <value>बाहर निकलें</value>
+  </data>
+  <data name="MainMenuBuilder_Open" xml:space="preserve">
+    <value>खोलें</value>
+  </data>
+  <data name="MainMenuBuilder_ShowCursor" xml:space="preserve">
+    <value>कर्सर दिखाएँ</value>
+  </data>
+  <data name="MouseHighlighter" xml:space="preserve">
+    <value>माउस हाइलाइटर</value>
+  </data>
+  <data name="MouseHighlighter_AlwaysColor" xml:space="preserve">
+    <value>हमेशा रंग को हाइलाइट करें:</value>
+  </data>
+  <data name="MouseHighlighter_AlwaysColorHelp" xml:space="preserve">
+    <value>लगातार हाइलाइट को अक्षम करने के लिए पारदर्शी रंग का उपयोग करें।</value>
+  </data>
+  <data name="MouseHighlighter_AutoActivate" xml:space="preserve">
+    <value>snapLite प्रारंभ होने पर स्वचालित रूप से सक्रिय हो जाता है</value>
+  </data>
+  <data name="MouseHighlighter_Circle" xml:space="preserve">
+    <value>वृत्त हाइलाइट</value>
+  </data>
+  <data name="MouseHighlighter_FadeDelay" xml:space="preserve">
+    <value>फीका विलंब (एमएस):</value>
+  </data>
+  <data name="MouseHighlighter_FadeDuration" xml:space="preserve">
+    <value>फीका अवधि (एमएस):</value>
+  </data>
+  <data name="MouseHighlighter_FollowCursor" xml:space="preserve">
+    <value>बटन दबाए रखने पर कर्सर का अनुसरण करें</value>
+  </data>
+  <data name="MouseHighlighter_KeepAfterRecording" xml:space="preserve">
+    <value>रिकॉर्डिंग के बाद हाइलाइट करते रहें</value>
+  </data>
+  <data name="MouseHighlighter_MiddleColor" xml:space="preserve">
+    <value>मध्य बटन का रंग:</value>
+  </data>
+  <data name="MouseHighlighter_MiddleReleaseCrosshairs" xml:space="preserve">
+    <value>मध्य बटन रिलीज़ पर क्रॉसहेयर दिखाएँ</value>
+  </data>
+  <data name="MouseHighlighter_Mode" xml:space="preserve">
+    <value>हाइलाइट मोड:</value>
+  </data>
+  <data name="MouseHighlighter_PrimaryColor" xml:space="preserve">
+    <value>प्राथमिक बटन का रंग:</value>
+  </data>
+  <data name="MouseHighlighter_PrimaryReleaseCrosshairs" xml:space="preserve">
+    <value>प्राथमिक बटन रिलीज़ पर क्रॉसहेयर दिखाएँ</value>
+  </data>
+  <data name="MouseHighlighter_Radius" xml:space="preserve">
+    <value>त्रिज्या (पीएक्स):</value>
+  </data>
+  <data name="MouseHighlighter_RecordingHelp" xml:space="preserve">
+    <value>रिकॉर्डिंग में क्लिक को हाइलाइट करने के लिए, टास्क सेटिंग्स → कैप्चर → स्क्रीन रिकॉर्डर में माउस हाइलाइटर विकल्प को सक्षम करें।</value>
+  </data>
+  <data name="MouseHighlighter_ReleaseCrosshairs" xml:space="preserve">
+    <value>सेकेंडरी बटन रिलीज़ पर क्रॉसहेयर दिखाएँ</value>
+  </data>
+  <data name="MouseHighlighter_Ripple" xml:space="preserve">
+    <value>लहर</value>
+  </data>
+  <data name="MouseHighlighter_RippleDuration" xml:space="preserve">
+    <value>तरंग अवधि (एमएस):</value>
+  </data>
+  <data name="MouseHighlighter_RippleIntensity" xml:space="preserve">
+    <value>तरंग तीव्रता:</value>
+  </data>
+  <data name="MouseHighlighter_RippleSize" xml:space="preserve">
+    <value>लहर का आकार (px):</value>
+  </data>
+  <data name="MouseHighlighter_SecondaryColor" xml:space="preserve">
+    <value>द्वितीयक बटन का रंग:</value>
+  </data>
+  <data name="MouseHighlighter_Start" xml:space="preserve">
+    <value>हाइलाइट करना प्रारंभ करें</value>
+  </data>
+  <data name="MouseHighlighter_StartFailed" xml:space="preserve">
+    <value>माउस हाइलाइटिंग प्रारंभ नहीं हो सका.</value>
+  </data>
+  <data name="MouseHighlighter_Stop" xml:space="preserve">
+    <value>हाइलाइट करना बंद करें</value>
+  </data>
+  <data name="MouseHighlighter_StopAfterRecording" xml:space="preserve">
+    <value>रिकॉर्डिंग बंद होने पर हाइलाइट करना बंद करें</value>
+  </data>
+  <data name="MouseHighlighter_Title" xml:space="preserve">
+    <value>माउस हाइलाइटर</value>
+  </data>
+  <data name="ScreenRecorderBar_Bar" xml:space="preserve">
+    <value>बार</value>
+  </data>
+  <data name="ScreenRecorderBar_Camera" xml:space="preserve">
+    <value>कैमरा</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreview" xml:space="preserve">
+    <value>कैमरा पूर्वावलोकन</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreviewOff" xml:space="preserve">
+    <value>कैमरा बंद है। रिकॉर्डिंग में दिखाने के लिए इसे चालू करें।</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreviewStarting" xml:space="preserve">
+    <value>कैमरा शुरू हो रहा है...</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreviewUnavailable" xml:space="preserve">
+    <value>कैमरा पूर्वावलोकन उपलब्ध नहीं है</value>
+  </data>
+  <data name="ScreenRecorderBar_Capture" xml:space="preserve">
+    <value>कैप्चर</value>
+  </data>
+  <data name="ScreenRecorderBar_Cursor" xml:space="preserve">
+    <value>कर्सर</value>
+  </data>
+  <data name="ScreenRecorderBar_LayoutPreview" xml:space="preserve">
+    <value>लेआउट का पूर्वावलोकन</value>
+  </data>
+  <data name="ScreenRecorderBar_Microphone" xml:space="preserve">
+    <value>माइक्रोफ़ोन</value>
+  </data>
+  <data name="ScreenRecorderBar_Off" xml:space="preserve">
+    <value>बंद</value>
+  </data>
+  <data name="ScreenRecorderBar_On" xml:space="preserve">
+    <value>चालू</value>
+  </data>
+  <data name="ScreenRecorderBar_Options" xml:space="preserve">
+    <value>विकल्प</value>
+  </data>
+  <data name="ScreenRecorderBar_Overlay" xml:space="preserve">
+    <value>ओवरले</value>
+  </data>
+  <data name="ScreenRecorderBar_Record" xml:space="preserve">
+    <value>रिकॉर्ड करें</value>
+  </data>
+  <data name="ScreenRecorderBar_RefreshDevices" xml:space="preserve">
+    <value>उपकरण ताज़ा करें</value>
+  </data>
+  <data name="ScreenRecorderBar_ShowBeforeRecording" xml:space="preserve">
+    <value>रिकॉर्डिंग से पहले रिकॉर्डर बार दिखाएँ</value>
+  </data>
+  <data name="ScreenRecorderBar_SourceOptions" xml:space="preserve">
+    <value>{0} विकल्प</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay" xml:space="preserve">
+    <value>प्रारंभ में विलंब</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_1Second" xml:space="preserve">
+    <value>1 सेकंड</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_2Seconds" xml:space="preserve">
+    <value>2 सेकंड</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_3Seconds" xml:space="preserve">
+    <value>3 सेकंड</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_4Seconds" xml:space="preserve">
+    <value>4 सेकंड</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_5Seconds" xml:space="preserve">
+    <value>5 सेकंड</value>
+  </data>
+  <data name="ScreenRecorderBar_SystemAudio" xml:space="preserve">
+    <value>सिस्टम ऑडियो</value>
+  </data>
+  <data name="ScreenRecorderBar_TargetUnavailable" xml:space="preserve">
+    <value>रिकॉर्डिंग के लिए चुनी गई विंडो अब उपलब्ध नहीं है।</value>
+  </data>
+  <data name="ScreenRecorderBar_Volume" xml:space="preserve">
+    <value>रिकॉर्डिंग की आवाज़ (%)</value>
+  </data>
+  <data name="TaskSettingsWindow_Cancel" xml:space="preserve">
+    <value>रद्द करें</value>
+  </data>
+  <data name="TaskSettingsWindow_DurationSeconds" xml:space="preserve">
+    <value>अवधि (सेकंड):</value>
+  </data>
+  <data name="TaskSettingsWindow_GIFFPS" xml:space="preserve">
+    <value>GIF FPS:</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorder" xml:space="preserve">
+    <value>अंतर्निहित स्क्रीन रिकॉर्डर</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderBitrate" xml:space="preserve">
+    <value>वीडियो बिटरेट (kbps):</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Circle" xml:space="preserve">
+    <value>वृत्त</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_DefaultDevice" xml:space="preserve">
+    <value>पहला उपलब्ध कैमरा</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Ellipse" xml:space="preserve">
+    <value>दीर्घवृत्त</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_FPS" xml:space="preserve">
+    <value>कैमरा FPS:</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Margin" xml:space="preserve">
+    <value>मार्जिन (पिक्सेल):</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_NoDevices" xml:space="preserve">
+    <value>कोई कैमरा नहीं मिला</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Rectangle" xml:space="preserve">
+    <value>आयत</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Resolution" xml:space="preserve">
+    <value>कैप्चर रिज़ॉल्यूशन:</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_RoundedRectangle" xml:space="preserve">
+    <value>गोल कोनों वाला आयत</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Shape" xml:space="preserve">
+    <value>आकार:</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Square" xml:space="preserve">
+    <value>वर्ग</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_UnavailableDevice" xml:space="preserve">
+    <value>कैमरा उपलब्ध नहीं है</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Width" xml:space="preserve">
+    <value>चौड़ाई (रिकॉर्डिंग का %):</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderDefaultMicrophone" xml:space="preserve">
+    <value>डिफ़ॉल्ट माइक्रोफ़ोन</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderDefaultSystemAudioDevice" xml:space="preserve">
+    <value>डिफ़ॉल्ट आउटपुट डिवाइस</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderUnavailableMicrophone" xml:space="preserve">
+    <value>अनुपलब्ध माइक्रोफ़ोन</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderUnavailableSystemAudioDevice" xml:space="preserve">
+    <value>अनुपलब्ध आउटपुट डिवाइस</value>
+  </data>
+  <data name="TaskSettingsWindow_Placement" xml:space="preserve">
+    <value>स्थान:</value>
+  </data>
+  <data name="TaskSettingsWindow_Recording" xml:space="preserve">
+    <value>रिकॉर्डिंग</value>
+  </data>
+  <data name="TaskSettingsWindow_ScreenRecordingFPS" xml:space="preserve">
+    <value>स्क्रीन रिकॉर्डिंग FPS:</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowRecordingButtonLabels" xml:space="preserve">
+    <value>रिकॉर्डिंग बटन के लेबल दिखाएँ</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowRecordingTimer" xml:space="preserve">
+    <value>रिकॉर्डिंग टाइमर दिखाएँ</value>
+  </data>
+  <data name="TaskSettingsWindow_UseFixedDuration" xml:space="preserve">
+    <value>निश्चित अवधि उपयोग करें</value>
+  </data>
+</root>

@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActionsToolbarWindow_Close" xml:space="preserve">
+    <value>Zavřít</value>
+  </data>
+  <data name="ApplicationSettingsWindow_AdvancedHotkeys" xml:space="preserve">
+    <value>Klávesové zkratky</value>
+  </data>
+  <data name="ApplicationSettingsWindow_BottomLeft" xml:space="preserve">
+    <value>Vlevo dole</value>
+  </data>
+  <data name="ApplicationSettingsWindow_BottomRight" xml:space="preserve">
+    <value>Vpravo dole</value>
+  </data>
+  <data name="ApplicationSettingsWindow_Browse" xml:space="preserve">
+    <value>Procházet...</value>
+  </data>
+  <data name="ApplicationSettingsWindow_ScreenshotsFolder" xml:space="preserve">
+    <value>Složka snímků obrazovky</value>
+  </data>
+  <data name="ApplicationSettingsWindow_Settings" xml:space="preserve">
+    <value>Nastavení</value>
+  </data>
+  <data name="ApplicationSettingsWindow_TopLeft" xml:space="preserve">
+    <value>Vlevo nahoře</value>
+  </data>
+  <data name="ApplicationSettingsWindow_TopRight" xml:space="preserve">
+    <value>Vpravo nahoře</value>
+  </data>
+  <data name="AutoCaptureWindow_Seconds" xml:space="preserve">
+    <value>sekundy</value>
+  </data>
+  <data name="Lite_AppName" xml:space="preserve">
+    <value>snapLite</value>
+  </data>
+  <data name="Lite_ClickToOpen" xml:space="preserve">
+    <value>Kliknutím otevřete</value>
+  </data>
+  <data name="Lite_HotkeyInUse" xml:space="preserve">
+    <value>používá jiná aplikace</value>
+  </data>
+  <data name="Lite_HotkeyPrompt" xml:space="preserve">
+    <value>Stiskněte kombinaci kláves...</value>
+  </data>
+  <data name="Lite_RecorderOptionsHint" xml:space="preserve">
+    <value>Zvuk, kamera, kvalita a další možnosti nahrávání jsou na panelu nástrojů zobrazeném před nahráváním.</value>
+  </data>
+  <data name="Lite_RecordingSaved" xml:space="preserve">
+    <value>Nahrávka uložena</value>
+  </data>
+  <data name="Lite_RegionAnnotations" xml:space="preserve">
+    <value>Po výběru oblasti přidat poznámky</value>
+  </data>
+  <data name="Lite_RunningInTray" xml:space="preserve">
+    <value>snapLite běží v oznamovací oblasti.</value>
+  </data>
+  <data name="Lite_ScreenshotCopied" xml:space="preserve">
+    <value>Snímek obrazovky zkopírován do schránky</value>
+  </data>
+  <data name="Lite_ScreenshotSaved" xml:space="preserve">
+    <value>Snímek obrazovky uložen</value>
+  </data>
+  <data name="Lite_ShowNotification" xml:space="preserve">
+    <value>Po pořízení zobrazit oznámení</value>
+  </data>
+  <data name="MainMenuBuilder_Capture" xml:space="preserve">
+    <value>Zachytit</value>
+  </data>
+  <data name="MainMenuBuilder_Exit" xml:space="preserve">
+    <value>Ukončit</value>
+  </data>
+  <data name="MainMenuBuilder_Open" xml:space="preserve">
+    <value>Otevřít</value>
+  </data>
+  <data name="MainMenuBuilder_ShowCursor" xml:space="preserve">
+    <value>Zobrazit kurzor</value>
+  </data>
+  <data name="MouseHighlighter" xml:space="preserve">
+    <value>Zvýrazňovač myši</value>
+  </data>
+  <data name="MouseHighlighter_AlwaysColor" xml:space="preserve">
+    <value>Vždy zvýraznit barvu:</value>
+  </data>
+  <data name="MouseHighlighter_AlwaysColorHelp" xml:space="preserve">
+    <value>Chcete-li zakázat trvalé zvýraznění, použijte průhlednou barvu.</value>
+  </data>
+  <data name="MouseHighlighter_AutoActivate" xml:space="preserve">
+    <value>Automaticky aktivovat při spuštění snapLite</value>
+  </data>
+  <data name="MouseHighlighter_Circle" xml:space="preserve">
+    <value>Zvýraznění kruhu</value>
+  </data>
+  <data name="MouseHighlighter_FadeDelay" xml:space="preserve">
+    <value>Zpoždění slábnutí (ms):</value>
+  </data>
+  <data name="MouseHighlighter_FadeDuration" xml:space="preserve">
+    <value>Doba prolínání (ms):</value>
+  </data>
+  <data name="MouseHighlighter_FollowCursor" xml:space="preserve">
+    <value>Při držení tlačítka sledujte kurzor</value>
+  </data>
+  <data name="MouseHighlighter_KeepAfterRecording" xml:space="preserve">
+    <value>Po nahrávání pokračujte ve zvýrazňování</value>
+  </data>
+  <data name="MouseHighlighter_MiddleColor" xml:space="preserve">
+    <value>Barva prostředního tlačítka:</value>
+  </data>
+  <data name="MouseHighlighter_MiddleReleaseCrosshairs" xml:space="preserve">
+    <value>Zobrazit zaměřovací kříž při uvolnění prostředního tlačítka</value>
+  </data>
+  <data name="MouseHighlighter_Mode" xml:space="preserve">
+    <value>Režim zvýraznění:</value>
+  </data>
+  <data name="MouseHighlighter_PrimaryColor" xml:space="preserve">
+    <value>Barva primárního tlačítka:</value>
+  </data>
+  <data name="MouseHighlighter_PrimaryReleaseCrosshairs" xml:space="preserve">
+    <value>Ukázat zaměřovací kříž při uvolnění primárního tlačítka</value>
+  </data>
+  <data name="MouseHighlighter_Radius" xml:space="preserve">
+    <value>Poloměr (px):</value>
+  </data>
+  <data name="MouseHighlighter_RecordingHelp" xml:space="preserve">
+    <value>Chcete-li zvýraznit kliknutí v nahrávkách, povolte možnost zvýraznění myši v Nastavení úlohy → Zachytit → Záznam obrazovky.</value>
+  </data>
+  <data name="MouseHighlighter_ReleaseCrosshairs" xml:space="preserve">
+    <value>Ukázat zaměřovací kříž při uvolnění sekundárního tlačítka</value>
+  </data>
+  <data name="MouseHighlighter_Ripple" xml:space="preserve">
+    <value>Zvlnění</value>
+  </data>
+  <data name="MouseHighlighter_RippleDuration" xml:space="preserve">
+    <value>Trvání zvlnění (ms):</value>
+  </data>
+  <data name="MouseHighlighter_RippleIntensity" xml:space="preserve">
+    <value>Intenzita zvlnění:</value>
+  </data>
+  <data name="MouseHighlighter_RippleSize" xml:space="preserve">
+    <value>Velikost zvlnění (px):</value>
+  </data>
+  <data name="MouseHighlighter_SecondaryColor" xml:space="preserve">
+    <value>Barva sekundárního tlačítka:</value>
+  </data>
+  <data name="MouseHighlighter_Start" xml:space="preserve">
+    <value>Začněte zvýrazňovat</value>
+  </data>
+  <data name="MouseHighlighter_StartFailed" xml:space="preserve">
+    <value>Nelze spustit zvýraznění myší.</value>
+  </data>
+  <data name="MouseHighlighter_Stop" xml:space="preserve">
+    <value>Přestaňte zvýrazňovat</value>
+  </data>
+  <data name="MouseHighlighter_StopAfterRecording" xml:space="preserve">
+    <value>Zastavte zvýraznění, když se nahrávání zastaví</value>
+  </data>
+  <data name="MouseHighlighter_Title" xml:space="preserve">
+    <value>Zvýrazňovač myši</value>
+  </data>
+  <data name="ScreenRecorderBar_Bar" xml:space="preserve">
+    <value>Panel</value>
+  </data>
+  <data name="ScreenRecorderBar_Camera" xml:space="preserve">
+    <value>Kamera</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreview" xml:space="preserve">
+    <value>Náhled kamery</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreviewOff" xml:space="preserve">
+    <value>Kamera je vypnutá. Zapněte ji, aby se zobrazila v nahrávce.</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreviewStarting" xml:space="preserve">
+    <value>Spouštění kamery...</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreviewUnavailable" xml:space="preserve">
+    <value>Náhled kamery není dostupný</value>
+  </data>
+  <data name="ScreenRecorderBar_Capture" xml:space="preserve">
+    <value>Zachycení</value>
+  </data>
+  <data name="ScreenRecorderBar_Cursor" xml:space="preserve">
+    <value>Kurzor</value>
+  </data>
+  <data name="ScreenRecorderBar_LayoutPreview" xml:space="preserve">
+    <value>Náhled rozložení</value>
+  </data>
+  <data name="ScreenRecorderBar_Microphone" xml:space="preserve">
+    <value>Mikrofon</value>
+  </data>
+  <data name="ScreenRecorderBar_Off" xml:space="preserve">
+    <value>Vypnuto</value>
+  </data>
+  <data name="ScreenRecorderBar_On" xml:space="preserve">
+    <value>Zapnuto</value>
+  </data>
+  <data name="ScreenRecorderBar_Options" xml:space="preserve">
+    <value>Možnosti</value>
+  </data>
+  <data name="ScreenRecorderBar_Overlay" xml:space="preserve">
+    <value>Překryv</value>
+  </data>
+  <data name="ScreenRecorderBar_Record" xml:space="preserve">
+    <value>Nahrávat</value>
+  </data>
+  <data name="ScreenRecorderBar_RefreshDevices" xml:space="preserve">
+    <value>Obnovit zařízení</value>
+  </data>
+  <data name="ScreenRecorderBar_ShowBeforeRecording" xml:space="preserve">
+    <value>Zobrazit panel před nahráváním</value>
+  </data>
+  <data name="ScreenRecorderBar_SourceOptions" xml:space="preserve">
+    <value>Možnosti: {0}</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay" xml:space="preserve">
+    <value>Zpoždění začátku</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_1Second" xml:space="preserve">
+    <value>1 sekunda</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_2Seconds" xml:space="preserve">
+    <value>2 sekundy</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_3Seconds" xml:space="preserve">
+    <value>3 sekundy</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_4Seconds" xml:space="preserve">
+    <value>4 sekundy</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_5Seconds" xml:space="preserve">
+    <value>5 sekund</value>
+  </data>
+  <data name="ScreenRecorderBar_SystemAudio" xml:space="preserve">
+    <value>Systémový zvuk</value>
+  </data>
+  <data name="ScreenRecorderBar_TargetUnavailable" xml:space="preserve">
+    <value>Vybrané nahrávané okno již není dostupné.</value>
+  </data>
+  <data name="ScreenRecorderBar_Volume" xml:space="preserve">
+    <value>Hlasitost nahrávky (%)</value>
+  </data>
+  <data name="TaskSettingsWindow_Cancel" xml:space="preserve">
+    <value>Zrušit</value>
+  </data>
+  <data name="TaskSettingsWindow_DurationSeconds" xml:space="preserve">
+    <value>Doba trvání (sekundy):</value>
+  </data>
+  <data name="TaskSettingsWindow_GIFFPS" xml:space="preserve">
+    <value>FPS obrázku GIF:</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorder" xml:space="preserve">
+    <value>Vestavěný záznam obrazovky</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderBitrate" xml:space="preserve">
+    <value>Datový tok videa (kbps):</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Circle" xml:space="preserve">
+    <value>Kruh</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_DefaultDevice" xml:space="preserve">
+    <value>První dostupná kamera</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Ellipse" xml:space="preserve">
+    <value>Elipsa</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_FPS" xml:space="preserve">
+    <value>FPS kamery:</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Margin" xml:space="preserve">
+    <value>Okraj (pixely):</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_NoDevices" xml:space="preserve">
+    <value>Nebyly nalezeny žádné kamery</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Rectangle" xml:space="preserve">
+    <value>Obdélník</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Resolution" xml:space="preserve">
+    <value>Rozlišení snímání:</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_RoundedRectangle" xml:space="preserve">
+    <value>Zaoblený obdélník</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Shape" xml:space="preserve">
+    <value>Tvar:</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Square" xml:space="preserve">
+    <value>Čtverec</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_UnavailableDevice" xml:space="preserve">
+    <value>Kamera není dostupná</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Width" xml:space="preserve">
+    <value>Šířka (% záznamu):</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderDefaultMicrophone" xml:space="preserve">
+    <value>Výchozí mikrofon</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderDefaultSystemAudioDevice" xml:space="preserve">
+    <value>Výchozí výstupní zařízení</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderUnavailableMicrophone" xml:space="preserve">
+    <value>Nedostupný mikrofon</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderUnavailableSystemAudioDevice" xml:space="preserve">
+    <value>Nedostupné výstupní zařízení</value>
+  </data>
+  <data name="TaskSettingsWindow_Placement" xml:space="preserve">
+    <value>Umístění:</value>
+  </data>
+  <data name="TaskSettingsWindow_Recording" xml:space="preserve">
+    <value>Nahrávání</value>
+  </data>
+  <data name="TaskSettingsWindow_ScreenRecordingFPS" xml:space="preserve">
+    <value>FPS nahrávání obrazovky:</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowRecordingButtonLabels" xml:space="preserve">
+    <value>Zobrazit popisky tlačítek nahrávání</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowRecordingTimer" xml:space="preserve">
+    <value>Zobrazit časovač nahrávání</value>
+  </data>
+  <data name="TaskSettingsWindow_UseFixedDuration" xml:space="preserve">
+    <value>Použít pevnou dobu trvání</value>
+  </data>
+</root>

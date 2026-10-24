@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActionsToolbarWindow_Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="ApplicationSettingsWindow_AdvancedHotkeys" xml:space="preserve">
+    <value>快捷键</value>
+  </data>
+  <data name="ApplicationSettingsWindow_BottomLeft" xml:space="preserve">
+    <value>左下</value>
+  </data>
+  <data name="ApplicationSettingsWindow_BottomRight" xml:space="preserve">
+    <value>右下</value>
+  </data>
+  <data name="ApplicationSettingsWindow_Browse" xml:space="preserve">
+    <value>浏览...</value>
+  </data>
+  <data name="ApplicationSettingsWindow_ScreenshotsFolder" xml:space="preserve">
+    <value>截图文件夹</value>
+  </data>
+  <data name="ApplicationSettingsWindow_Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="ApplicationSettingsWindow_TopLeft" xml:space="preserve">
+    <value>左上</value>
+  </data>
+  <data name="ApplicationSettingsWindow_TopRight" xml:space="preserve">
+    <value>右上</value>
+  </data>
+  <data name="AutoCaptureWindow_Seconds" xml:space="preserve">
+    <value>秒</value>
+  </data>
+  <data name="Lite_AppName" xml:space="preserve">
+    <value>极简录屏</value>
+  </data>
+  <data name="Lite_ClickToOpen" xml:space="preserve">
+    <value>点击打开</value>
+  </data>
+  <data name="Lite_HotkeyInUse" xml:space="preserve">
+    <value>已被其他程序占用</value>
+  </data>
+  <data name="Lite_HotkeyPrompt" xml:space="preserve">
+    <value>请按下组合键...</value>
+  </data>
+  <data name="Lite_RecorderOptionsHint" xml:space="preserve">
+    <value>音频、摄像头、画质等录制选项在开始录制前显示的工具栏中设置。</value>
+  </data>
+  <data name="Lite_RecordingSaved" xml:space="preserve">
+    <value>录制已保存</value>
+  </data>
+  <data name="Lite_RegionAnnotations" xml:space="preserve">
+    <value>选择区域后可添加标注</value>
+  </data>
+  <data name="Lite_RunningInTray" xml:space="preserve">
+    <value>极简录屏正在任务栏通知区域运行。</value>
+  </data>
+  <data name="Lite_ScreenshotCopied" xml:space="preserve">
+    <value>截图已复制到剪贴板</value>
+  </data>
+  <data name="Lite_ScreenshotSaved" xml:space="preserve">
+    <value>截图已保存</value>
+  </data>
+  <data name="Lite_ShowNotification" xml:space="preserve">
+    <value>截图或录制后显示通知</value>
+  </data>
+  <data name="MainMenuBuilder_Capture" xml:space="preserve">
+    <value>截图</value>
+  </data>
+  <data name="MainMenuBuilder_Exit" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="MainMenuBuilder_Open" xml:space="preserve">
+    <value>打开</value>
+  </data>
+  <data name="MainMenuBuilder_ShowCursor" xml:space="preserve">
+    <value>显示光标</value>
+  </data>
+  <data name="MouseHighlighter" xml:space="preserve">
+    <value>鼠标荧光笔</value>
+  </data>
+  <data name="MouseHighlighter_AlwaysColor" xml:space="preserve">
+    <value>始终突出显示颜色：</value>
+  </data>
+  <data name="MouseHighlighter_AlwaysColorHelp" xml:space="preserve">
+    <value>使用透明颜色禁用持续突出显示。</value>
+  </data>
+  <data name="MouseHighlighter_AutoActivate" xml:space="preserve">
+    <value>极简录屏启动时自动激活</value>
+  </data>
+  <data name="MouseHighlighter_Circle" xml:space="preserve">
+    <value>圆圈突出显示</value>
+  </data>
+  <data name="MouseHighlighter_FadeDelay" xml:space="preserve">
+    <value>淡入淡出延迟（毫秒）：</value>
+  </data>
+  <data name="MouseHighlighter_FadeDuration" xml:space="preserve">
+    <value>淡入淡出持续时间（毫秒）：</value>
+  </data>
+  <data name="MouseHighlighter_FollowCursor" xml:space="preserve">
+    <value>按住按钮时跟随光标</value>
+  </data>
+  <data name="MouseHighlighter_KeepAfterRecording" xml:space="preserve">
+    <value>录制后保持高亮显示</value>
+  </data>
+  <data name="MouseHighlighter_MiddleColor" xml:space="preserve">
+    <value>中间按钮颜色：</value>
+  </data>
+  <data name="MouseHighlighter_MiddleReleaseCrosshairs" xml:space="preserve">
+    <value>释放中间按钮时显示十字准线</value>
+  </data>
+  <data name="MouseHighlighter_Mode" xml:space="preserve">
+    <value>突出显示模式：</value>
+  </data>
+  <data name="MouseHighlighter_PrimaryColor" xml:space="preserve">
+    <value>主按钮颜色：</value>
+  </data>
+  <data name="MouseHighlighter_PrimaryReleaseCrosshairs" xml:space="preserve">
+    <value>在主按钮释放时显示十字准线</value>
+  </data>
+  <data name="MouseHighlighter_Radius" xml:space="preserve">
+    <value>半径（像素）：</value>
+  </data>
+  <data name="MouseHighlighter_RecordingHelp" xml:space="preserve">
+    <value>要突出显示录制中的点击，请在任务设置 → 捕获 → 屏幕录像机中启用鼠标突出显示选项。</value>
+  </data>
+  <data name="MouseHighlighter_ReleaseCrosshairs" xml:space="preserve">
+    <value>释放辅助按钮时显示十字准线</value>
+  </data>
+  <data name="MouseHighlighter_Ripple" xml:space="preserve">
+    <value>波纹</value>
+  </data>
+  <data name="MouseHighlighter_RippleDuration" xml:space="preserve">
+    <value>纹波持续时间（毫秒）：</value>
+  </data>
+  <data name="MouseHighlighter_RippleIntensity" xml:space="preserve">
+    <value>纹波强度：</value>
+  </data>
+  <data name="MouseHighlighter_RippleSize" xml:space="preserve">
+    <value>波纹尺寸（像素）：</value>
+  </data>
+  <data name="MouseHighlighter_SecondaryColor" xml:space="preserve">
+    <value>辅助按钮颜色：</value>
+  </data>
+  <data name="MouseHighlighter_Start" xml:space="preserve">
+    <value>开始突出显示</value>
+  </data>
+  <data name="MouseHighlighter_StartFailed" xml:space="preserve">
+    <value>无法启动鼠标突出显示。</value>
+  </data>
+  <data name="MouseHighlighter_Stop" xml:space="preserve">
+    <value>停止突出显示</value>
+  </data>
+  <data name="MouseHighlighter_StopAfterRecording" xml:space="preserve">
+    <value>录制停止时停止突出显示</value>
+  </data>
+  <data name="MouseHighlighter_Title" xml:space="preserve">
+    <value>鼠标荧光笔</value>
+  </data>
+  <data name="ScreenRecorderBar_Bar" xml:space="preserve">
+    <value>工具栏</value>
+  </data>
+  <data name="ScreenRecorderBar_Camera" xml:space="preserve">
+    <value>摄像头</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreview" xml:space="preserve">
+    <value>摄像头预览</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreviewOff" xml:space="preserve">
+    <value>摄像头已关闭。打开后才会显示在录制中。</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreviewStarting" xml:space="preserve">
+    <value>正在启动摄像头...</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreviewUnavailable" xml:space="preserve">
+    <value>摄像头预览不可用</value>
+  </data>
+  <data name="ScreenRecorderBar_Capture" xml:space="preserve">
+    <value>采集</value>
+  </data>
+  <data name="ScreenRecorderBar_Cursor" xml:space="preserve">
+    <value>光标</value>
+  </data>
+  <data name="ScreenRecorderBar_LayoutPreview" xml:space="preserve">
+    <value>布局预览</value>
+  </data>
+  <data name="ScreenRecorderBar_Microphone" xml:space="preserve">
+    <value>麦克风</value>
+  </data>
+  <data name="ScreenRecorderBar_Off" xml:space="preserve">
+    <value>关</value>
+  </data>
+  <data name="ScreenRecorderBar_On" xml:space="preserve">
+    <value>开</value>
+  </data>
+  <data name="ScreenRecorderBar_Options" xml:space="preserve">
+    <value>选项</value>
+  </data>
+  <data name="ScreenRecorderBar_Overlay" xml:space="preserve">
+    <value>叠加</value>
+  </data>
+  <data name="ScreenRecorderBar_Record" xml:space="preserve">
+    <value>录制</value>
+  </data>
+  <data name="ScreenRecorderBar_RefreshDevices" xml:space="preserve">
+    <value>刷新设备</value>
+  </data>
+  <data name="ScreenRecorderBar_ShowBeforeRecording" xml:space="preserve">
+    <value>录制前显示录制栏</value>
+  </data>
+  <data name="ScreenRecorderBar_SourceOptions" xml:space="preserve">
+    <value>{0}选项</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay" xml:space="preserve">
+    <value>开始延迟</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_1Second" xml:space="preserve">
+    <value>1秒</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_2Seconds" xml:space="preserve">
+    <value>2秒</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_3Seconds" xml:space="preserve">
+    <value>3秒</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_4Seconds" xml:space="preserve">
+    <value>4秒</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_5Seconds" xml:space="preserve">
+    <value>5秒</value>
+  </data>
+  <data name="ScreenRecorderBar_SystemAudio" xml:space="preserve">
+    <value>系统音频</value>
+  </data>
+  <data name="ScreenRecorderBar_TargetUnavailable" xml:space="preserve">
+    <value>所选录制窗口已不可用。</value>
+  </data>
+  <data name="ScreenRecorderBar_Volume" xml:space="preserve">
+    <value>录制音量 (%)</value>
+  </data>
+  <data name="TaskSettingsWindow_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="TaskSettingsWindow_DurationSeconds" xml:space="preserve">
+    <value>持续时间（秒）：</value>
+  </data>
+  <data name="TaskSettingsWindow_GIFFPS" xml:space="preserve">
+    <value>GIF FPS：</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorder" xml:space="preserve">
+    <value>内置屏幕录制功能</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderBitrate" xml:space="preserve">
+    <value>视频比特率 (kbps)：</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Circle" xml:space="preserve">
+    <value>圆形</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_DefaultDevice" xml:space="preserve">
+    <value>第一个可用摄像头</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Ellipse" xml:space="preserve">
+    <value>椭圆</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_FPS" xml:space="preserve">
+    <value>摄像头帧率：</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Margin" xml:space="preserve">
+    <value>边距（像素）：</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_NoDevices" xml:space="preserve">
+    <value>未检测到摄像头</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Rectangle" xml:space="preserve">
+    <value>矩形</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Resolution" xml:space="preserve">
+    <value>捕获分辨率：</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_RoundedRectangle" xml:space="preserve">
+    <value>圆角矩形</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Shape" xml:space="preserve">
+    <value>形状:</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Square" xml:space="preserve">
+    <value>正方形</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_UnavailableDevice" xml:space="preserve">
+    <value>摄像头不可用</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Width" xml:space="preserve">
+    <value>宽度（占录制画面的 %）：</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderDefaultMicrophone" xml:space="preserve">
+    <value>默认麦克风</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderDefaultSystemAudioDevice" xml:space="preserve">
+    <value>默认输出设备</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderUnavailableMicrophone" xml:space="preserve">
+    <value>不可用的麦克风</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderUnavailableSystemAudioDevice" xml:space="preserve">
+    <value>不可用的输出设备</value>
+  </data>
+  <data name="TaskSettingsWindow_Placement" xml:space="preserve">
+    <value>位置：</value>
+  </data>
+  <data name="TaskSettingsWindow_Recording" xml:space="preserve">
+    <value>录制</value>
+  </data>
+  <data name="TaskSettingsWindow_ScreenRecordingFPS" xml:space="preserve">
+    <value>屏幕录制 FPS：</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowRecordingButtonLabels" xml:space="preserve">
+    <value>显示录制按钮标签</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowRecordingTimer" xml:space="preserve">
+    <value>显示录制计时器</value>
+  </data>
+  <data name="TaskSettingsWindow_UseFixedDuration" xml:space="preserve">
+    <value>使用固定时长</value>
+  </data>
+</root>

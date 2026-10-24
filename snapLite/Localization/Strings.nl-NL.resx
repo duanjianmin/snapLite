@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActionsToolbarWindow_Close" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="ApplicationSettingsWindow_AdvancedHotkeys" xml:space="preserve">
+    <value>Sneltoetsen</value>
+  </data>
+  <data name="ApplicationSettingsWindow_BottomLeft" xml:space="preserve">
+    <value>Linksonder</value>
+  </data>
+  <data name="ApplicationSettingsWindow_BottomRight" xml:space="preserve">
+    <value>Rechtsonder</value>
+  </data>
+  <data name="ApplicationSettingsWindow_Browse" xml:space="preserve">
+    <value>Bladeren...</value>
+  </data>
+  <data name="ApplicationSettingsWindow_ScreenshotsFolder" xml:space="preserve">
+    <value>Schermafbeeldingenmap</value>
+  </data>
+  <data name="ApplicationSettingsWindow_Settings" xml:space="preserve">
+    <value>Instellingen</value>
+  </data>
+  <data name="ApplicationSettingsWindow_TopLeft" xml:space="preserve">
+    <value>Linksboven</value>
+  </data>
+  <data name="ApplicationSettingsWindow_TopRight" xml:space="preserve">
+    <value>Rechtsboven</value>
+  </data>
+  <data name="AutoCaptureWindow_Seconds" xml:space="preserve">
+    <value>seconden</value>
+  </data>
+  <data name="Lite_AppName" xml:space="preserve">
+    <value>snapLite</value>
+  </data>
+  <data name="Lite_ClickToOpen" xml:space="preserve">
+    <value>Klik om te openen</value>
+  </data>
+  <data name="Lite_HotkeyInUse" xml:space="preserve">
+    <value>in gebruik door een andere app</value>
+  </data>
+  <data name="Lite_HotkeyPrompt" xml:space="preserve">
+    <value>Druk op een toetsencombinatie...</value>
+  </data>
+  <data name="Lite_RecorderOptionsHint" xml:space="preserve">
+    <value>Audio, camera, kwaliteit en andere opname-opties staan op de werkbalk die vóór het opnemen verschijnt.</value>
+  </data>
+  <data name="Lite_RecordingSaved" xml:space="preserve">
+    <value>Opname opgeslagen</value>
+  </data>
+  <data name="Lite_RegionAnnotations" xml:space="preserve">
+    <value>Aantekeningen maken na het selecteren van een gebied</value>
+  </data>
+  <data name="Lite_RunningInTray" xml:space="preserve">
+    <value>snapLite draait in het systeemvak.</value>
+  </data>
+  <data name="Lite_ScreenshotCopied" xml:space="preserve">
+    <value>Schermafbeelding naar klembord gekopieerd</value>
+  </data>
+  <data name="Lite_ScreenshotSaved" xml:space="preserve">
+    <value>Schermafbeelding opgeslagen</value>
+  </data>
+  <data name="Lite_ShowNotification" xml:space="preserve">
+    <value>Melding tonen na vastleggen</value>
+  </data>
+  <data name="MainMenuBuilder_Capture" xml:space="preserve">
+    <value>Vastleggen</value>
+  </data>
+  <data name="MainMenuBuilder_Exit" xml:space="preserve">
+    <value>Afsluiten</value>
+  </data>
+  <data name="MainMenuBuilder_Open" xml:space="preserve">
+    <value>Openen</value>
+  </data>
+  <data name="MainMenuBuilder_ShowCursor" xml:space="preserve">
+    <value>Cursor weergeven</value>
+  </data>
+  <data name="MouseHighlighter" xml:space="preserve">
+    <value>Muisklikmarkering</value>
+  </data>
+  <data name="MouseHighlighter_AlwaysColor" xml:space="preserve">
+    <value>Markeer altijd kleur:</value>
+  </data>
+  <data name="MouseHighlighter_AlwaysColorHelp" xml:space="preserve">
+    <value>Gebruik een transparante kleur om de aanhoudende markering uit te schakelen.</value>
+  </data>
+  <data name="MouseHighlighter_AutoActivate" xml:space="preserve">
+    <value>Automatisch activeren wanneer snapLite start</value>
+  </data>
+  <data name="MouseHighlighter_Circle" xml:space="preserve">
+    <value>Cirkel hoogtepunt</value>
+  </data>
+  <data name="MouseHighlighter_FadeDelay" xml:space="preserve">
+    <value>Fade-vertraging (ms):</value>
+  </data>
+  <data name="MouseHighlighter_FadeDuration" xml:space="preserve">
+    <value>Duur van fade (ms):</value>
+  </data>
+  <data name="MouseHighlighter_FollowCursor" xml:space="preserve">
+    <value>Volg de cursor terwijl u een knop ingedrukt houdt</value>
+  </data>
+  <data name="MouseHighlighter_KeepAfterRecording" xml:space="preserve">
+    <value>Blijf markeren na de opname</value>
+  </data>
+  <data name="MouseHighlighter_MiddleColor" xml:space="preserve">
+    <value>Kleur middelste knop:</value>
+  </data>
+  <data name="MouseHighlighter_MiddleReleaseCrosshairs" xml:space="preserve">
+    <value>Toon een draadkruis bij het loslaten van de middelste knop</value>
+  </data>
+  <data name="MouseHighlighter_Mode" xml:space="preserve">
+    <value>Hoogtepuntmodus:</value>
+  </data>
+  <data name="MouseHighlighter_PrimaryColor" xml:space="preserve">
+    <value>Kleur primaire knop:</value>
+  </data>
+  <data name="MouseHighlighter_PrimaryReleaseCrosshairs" xml:space="preserve">
+    <value>Toon draadkruis bij het loslaten van de primaire knop</value>
+  </data>
+  <data name="MouseHighlighter_Radius" xml:space="preserve">
+    <value>Straal (px):</value>
+  </data>
+  <data name="MouseHighlighter_RecordingHelp" xml:space="preserve">
+    <value>Om klikken in opnamen te markeren, schakelt u de optie voor muismarkering in Taakinstellingen → Vastleggen → Schermrecorder in.</value>
+  </data>
+  <data name="MouseHighlighter_ReleaseCrosshairs" xml:space="preserve">
+    <value>Toon draadkruis bij het loslaten van de secundaire knop</value>
+  </data>
+  <data name="MouseHighlighter_Ripple" xml:space="preserve">
+    <value>Rimpeling</value>
+  </data>
+  <data name="MouseHighlighter_RippleDuration" xml:space="preserve">
+    <value>Rimpelduur (ms):</value>
+  </data>
+  <data name="MouseHighlighter_RippleIntensity" xml:space="preserve">
+    <value>Rimpelintensiteit:</value>
+  </data>
+  <data name="MouseHighlighter_RippleSize" xml:space="preserve">
+    <value>Rimpelgrootte (px):</value>
+  </data>
+  <data name="MouseHighlighter_SecondaryColor" xml:space="preserve">
+    <value>Kleur secundaire knop:</value>
+  </data>
+  <data name="MouseHighlighter_Start" xml:space="preserve">
+    <value>Begin met markeren</value>
+  </data>
+  <data name="MouseHighlighter_StartFailed" xml:space="preserve">
+    <value>Kan muisklikmarkering niet starten.</value>
+  </data>
+  <data name="MouseHighlighter_Stop" xml:space="preserve">
+    <value>Stop met markeren</value>
+  </data>
+  <data name="MouseHighlighter_StopAfterRecording" xml:space="preserve">
+    <value>Stop met markeren wanneer de opname stopt</value>
+  </data>
+  <data name="MouseHighlighter_Title" xml:space="preserve">
+    <value>Muisklikmarkering</value>
+  </data>
+  <data name="ScreenRecorderBar_Bar" xml:space="preserve">
+    <value>Balk</value>
+  </data>
+  <data name="ScreenRecorderBar_Camera" xml:space="preserve">
+    <value>Camera</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreview" xml:space="preserve">
+    <value>Cameravoorbeeld</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreviewOff" xml:space="preserve">
+    <value>De camera staat uit. Zet hem aan om hem in de opname te tonen.</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreviewStarting" xml:space="preserve">
+    <value>Camera wordt gestart...</value>
+  </data>
+  <data name="ScreenRecorderBar_CameraPreviewUnavailable" xml:space="preserve">
+    <value>Cameravoorbeeld niet beschikbaar</value>
+  </data>
+  <data name="ScreenRecorderBar_Capture" xml:space="preserve">
+    <value>Vastleggen</value>
+  </data>
+  <data name="ScreenRecorderBar_Cursor" xml:space="preserve">
+    <value>Cursor</value>
+  </data>
+  <data name="ScreenRecorderBar_LayoutPreview" xml:space="preserve">
+    <value>Voorbeeld van indeling</value>
+  </data>
+  <data name="ScreenRecorderBar_Microphone" xml:space="preserve">
+    <value>Microfoon</value>
+  </data>
+  <data name="ScreenRecorderBar_Off" xml:space="preserve">
+    <value>Uit</value>
+  </data>
+  <data name="ScreenRecorderBar_On" xml:space="preserve">
+    <value>Aan</value>
+  </data>
+  <data name="ScreenRecorderBar_Options" xml:space="preserve">
+    <value>Opties</value>
+  </data>
+  <data name="ScreenRecorderBar_Overlay" xml:space="preserve">
+    <value>Overlay</value>
+  </data>
+  <data name="ScreenRecorderBar_Record" xml:space="preserve">
+    <value>Opnemen</value>
+  </data>
+  <data name="ScreenRecorderBar_RefreshDevices" xml:space="preserve">
+    <value>Apparaten vernieuwen</value>
+  </data>
+  <data name="ScreenRecorderBar_ShowBeforeRecording" xml:space="preserve">
+    <value>Opnamebalk tonen vóór het opnemen</value>
+  </data>
+  <data name="ScreenRecorderBar_SourceOptions" xml:space="preserve">
+    <value>Opties voor {0}</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay" xml:space="preserve">
+    <value>Startvertraging</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_1Second" xml:space="preserve">
+    <value>1 seconde</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_2Seconds" xml:space="preserve">
+    <value>2 seconden</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_3Seconds" xml:space="preserve">
+    <value>3 seconden</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_4Seconds" xml:space="preserve">
+    <value>4 seconden</value>
+  </data>
+  <data name="ScreenRecorderBar_StartDelay_5Seconds" xml:space="preserve">
+    <value>5 seconden</value>
+  </data>
+  <data name="ScreenRecorderBar_SystemAudio" xml:space="preserve">
+    <value>Systeemaudio</value>
+  </data>
+  <data name="ScreenRecorderBar_TargetUnavailable" xml:space="preserve">
+    <value>Het geselecteerde opnamevenster is niet meer beschikbaar.</value>
+  </data>
+  <data name="ScreenRecorderBar_Volume" xml:space="preserve">
+    <value>Opnamevolume (%)</value>
+  </data>
+  <data name="TaskSettingsWindow_Cancel" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="TaskSettingsWindow_DurationSeconds" xml:space="preserve">
+    <value>Duur (seconden):</value>
+  </data>
+  <data name="TaskSettingsWindow_GIFFPS" xml:space="preserve">
+    <value>GIF-FPS:</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorder" xml:space="preserve">
+    <value>Ingebouwde schermrecorder</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderBitrate" xml:space="preserve">
+    <value>Videobitsnelheid (kbps):</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Circle" xml:space="preserve">
+    <value>Cirkel</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_DefaultDevice" xml:space="preserve">
+    <value>Eerste beschikbare camera</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Ellipse" xml:space="preserve">
+    <value>Ellips</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_FPS" xml:space="preserve">
+    <value>Beeldsnelheid camera:</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Margin" xml:space="preserve">
+    <value>Marge (pixels):</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_NoDevices" xml:space="preserve">
+    <value>Geen camera’s gedetecteerd</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Rectangle" xml:space="preserve">
+    <value>Rechthoek</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Resolution" xml:space="preserve">
+    <value>Opnameresolutie:</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_RoundedRectangle" xml:space="preserve">
+    <value>Afgeronde rechthoek</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Shape" xml:space="preserve">
+    <value>Vorm:</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Square" xml:space="preserve">
+    <value>Vierkant</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_UnavailableDevice" xml:space="preserve">
+    <value>Camera niet beschikbaar</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderCamera_Width" xml:space="preserve">
+    <value>Breedte (% van opname):</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderDefaultMicrophone" xml:space="preserve">
+    <value>Standaardmicrofoon</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderDefaultSystemAudioDevice" xml:space="preserve">
+    <value>Standaarduitvoerapparaat</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderUnavailableMicrophone" xml:space="preserve">
+    <value>Niet-beschikbare microfoon</value>
+  </data>
+  <data name="TaskSettingsWindow_NativeRecorderUnavailableSystemAudioDevice" xml:space="preserve">
+    <value>Niet-beschikbaar uitvoerapparaat</value>
+  </data>
+  <data name="TaskSettingsWindow_Placement" xml:space="preserve">
+    <value>Plaatsing:</value>
+  </data>
+  <data name="TaskSettingsWindow_Recording" xml:space="preserve">
+    <value>Opname</value>
+  </data>
+  <data name="TaskSettingsWindow_ScreenRecordingFPS" xml:space="preserve">
+    <value>FPS schermopname:</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowRecordingButtonLabels" xml:space="preserve">
+    <value>Labels van opnameknoppen weergeven</value>
+  </data>
+  <data name="TaskSettingsWindow_ShowRecordingTimer" xml:space="preserve">
+    <value>Opnametimer weergeven</value>
+  </data>
+  <data name="TaskSettingsWindow_UseFixedDuration" xml:space="preserve">
+    <value>Vaste duur gebruiken</value>
+  </data>
+</root>
