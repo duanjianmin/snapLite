@@ -109,6 +109,9 @@
   <data name="Lite_RegionAnnotations" xml:space="preserve">
     <value>Aantekeningen maken na het selecteren van een gebied</value>
   </data>
+  <data name="Lite_RegionQuickCapture" xml:space="preserve">
+    <value>Gebiedsschermafbeeldingen opslaan zodra de muisknop wordt losgelaten</value>
+  </data>
   <data name="Lite_RunningInTray" xml:space="preserve">
     <value>snapLite draait in het systeemvak.</value>
   </data>

@@ -109,6 +109,9 @@
   <data name="Lite_RegionAnnotations" xml:space="preserve">
     <value>選取區域後可加上標註</value>
   </data>
+  <data name="Lite_RegionQuickCapture" xml:space="preserve">
+    <value>放開滑鼠後立即儲存區域截圖</value>
+  </data>
   <data name="Lite_RunningInTray" xml:space="preserve">
     <value>極簡錄屏正在通知區域中執行。</value>
   </data>

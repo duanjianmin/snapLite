@@ -85,6 +85,10 @@ internal sealed class NotificationWindow : Window
         closeTimer.Tick += (_, _) => Close();
         Opened += (_, _) =>
         {
+            // A toast from the previous screenshot must not end up in the next screenshot or recording;
+            // it stays visible on screen.
+            if (TryGetPlatformHandle()?.Handle is IntPtr handle && !NativeMethods.SetWindowDisplayAffinity(handle, 0x11)) // WDA_EXCLUDEFROMCAPTURE
+                DebugHelper.WriteLine("Notification could not be excluded from capture.");
             // The size is known only after the first layout pass.
             Dispatcher.UIThread.Post(PlaceInCorner, DispatcherPriority.Loaded);
             closeTimer.Start();

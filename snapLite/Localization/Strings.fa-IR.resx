@@ -109,6 +109,9 @@
   <data name="Lite_RegionAnnotations" xml:space="preserve">
     <value>حاشیه‌نویسی پس از انتخاب ناحیه</value>
   </data>
+  <data name="Lite_RegionQuickCapture" xml:space="preserve">
+    <value>ذخیره عکس ناحیه بلافاصله پس از رها کردن دکمه ماوس</value>
+  </data>
   <data name="Lite_RunningInTray" xml:space="preserve">
     <value>snapLite در ناحیه اعلان در حال اجراست.</value>
   </data>

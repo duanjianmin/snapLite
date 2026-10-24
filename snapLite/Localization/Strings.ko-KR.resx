@@ -109,6 +109,9 @@
   <data name="Lite_RegionAnnotations" xml:space="preserve">
     <value>영역 선택 후 주석 달기</value>
   </data>
+  <data name="Lite_RegionQuickCapture" xml:space="preserve">
+    <value>마우스 버튼을 놓는 즉시 영역 스크린샷 저장</value>
+  </data>
   <data name="Lite_RunningInTray" xml:space="preserve">
     <value>snapLite가 알림 영역에서 실행 중입니다.</value>
   </data>

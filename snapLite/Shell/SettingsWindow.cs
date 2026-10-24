@@ -89,6 +89,7 @@ internal sealed class SettingsWindow : Window
         root.Children.Add(Check(HelpersStrings.AfterCaptureTasks_SaveImageToFile, settings.SaveScreenshotToFile, value => settings.SaveScreenshotToFile = value));
         root.Children.Add(Check(HelpersStrings.AfterCaptureTasks_CopyImageToClipboard, settings.CopyScreenshotToClipboard, value => settings.CopyScreenshotToClipboard = value));
         root.Children.Add(Check(Strings.Lite_RegionAnnotations, settings.RegionCaptureAnnotations, value => settings.RegionCaptureAnnotations = value));
+        root.Children.Add(Check(Strings.Lite_RegionQuickCapture, settings.RegionCaptureOptions.QuickCapture, value => settings.RegionCaptureOptions.QuickCapture = value));
         root.Children.Add(Check(Strings.MainMenuBuilder_ShowCursor, settings.ScreenshotShowCursor, value => settings.ScreenshotShowCursor = value));
         root.Children.Add(Check(Strings.Lite_ShowNotification, settings.ShowScreenshotNotification, value => settings.ShowScreenshotNotification = value));
 

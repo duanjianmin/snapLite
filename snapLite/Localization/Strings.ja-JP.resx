@@ -109,6 +109,9 @@
   <data name="Lite_RegionAnnotations" xml:space="preserve">
     <value>範囲選択後に注釈を付ける</value>
   </data>
+  <data name="Lite_RegionQuickCapture" xml:space="preserve">
+    <value>マウスボタンを離したらすぐに領域のスクリーンショットを保存する</value>
+  </data>
   <data name="Lite_RunningInTray" xml:space="preserve">
     <value>snapLite は通知領域で実行中です。</value>
   </data>

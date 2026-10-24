@@ -109,6 +109,9 @@
   <data name="Lite_RegionAnnotations" xml:space="preserve">
     <value>ใส่คำอธิบายประกอบหลังเลือกพื้นที่</value>
   </data>
+  <data name="Lite_RegionQuickCapture" xml:space="preserve">
+    <value>บันทึกภาพหน้าจอเฉพาะส่วนทันทีที่ปล่อยปุ่มเมาส์</value>
+  </data>
   <data name="Lite_RunningInTray" xml:space="preserve">
     <value>snapLite กำลังทำงานในพื้นที่แจ้งเตือน</value>
   </data>

@@ -49,6 +49,9 @@ public sealed class AppSettings
     /// <summary>Raise when the default hotkeys change; older settings files then switch to the new defaults once.</summary>
     private const int CurrentHotkeyDefaults = 2;
 
+    /// <summary>Raise when another default changes; see <see cref="UpgradeDefaults"/>.</summary>
+    private const int CurrentSettingsVersion = 1;
+
     // Screenshots
     public string ScreenshotsFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyPictures), AppInfo.Id);
     public bool SaveScreenshotToFile = true;
@@ -56,7 +59,8 @@ public sealed class AppSettings
     public bool ShowScreenshotNotification = true;
     public bool ScreenshotShowCursor = false;
     public bool RegionCaptureAnnotations = true;
-    public RegionCaptureOptions RegionCaptureOptions = new();
+    // A region waits for Enter, double-click or the confirm button, so it can be adjusted and annotated first.
+    public RegionCaptureOptions RegionCaptureOptions = new() { QuickCapture = false };
     public ImageEditorOptions ImageEditorOptions = new();
     public ScrollingCaptureOptions ScrollingCaptureOptions = new();
 
@@ -64,6 +68,8 @@ public sealed class AppSettings
     public RecorderSettings Recorder = new();
     public MouseHighlighterOptions MouseHighlighter = new();
     public Rectangle LastRecordingRegion;
+
+    public int SettingsVersion;
 
     // Global hotkeys. The Print Screen family follows Windows, Greenshot, Lightshot and ShareX,
     // and stays clear of the chat apps' screenshot keys (WeChat Alt+A, QQ Ctrl+Alt+A, DingTalk/Feishu Ctrl+Shift+A).
@@ -95,8 +101,20 @@ public sealed class AppSettings
         }
     }
 
+    /// <summary>Moves settings saved by older versions onto changed defaults, once per change.</summary>
+    public void UpgradeDefaults()
+    {
+        UpgradeHotkeyDefaults();
+        if (SettingsVersion < 1)
+        {
+            // 1.0.0 saved region captures as soon as the mouse was released.
+            RegionCaptureOptions.QuickCapture = false;
+        }
+        SettingsVersion = CurrentSettingsVersion;
+    }
+
     /// <summary>Moves settings saved with older default hotkeys onto the current defaults, once.</summary>
-    public void UpgradeHotkeyDefaults()
+    private void UpgradeHotkeyDefaults()
     {
         if (HotkeyDefaultsVersion >= CurrentHotkeyDefaults) return;
         AppSettings defaults = new();

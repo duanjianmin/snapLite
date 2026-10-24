@@ -109,6 +109,9 @@
   <data name="Lite_RegionAnnotations" xml:space="preserve">
     <value>Bölge seçtikten sonra not ekle</value>
   </data>
+  <data name="Lite_RegionQuickCapture" xml:space="preserve">
+    <value>Fare düğmesi bırakılır bırakılmaz bölge ekran görüntüsünü kaydet</value>
+  </data>
   <data name="Lite_RunningInTray" xml:space="preserve">
     <value>snapLite bildirim alanında çalışıyor.</value>
   </data>

@@ -83,7 +83,10 @@ public static class RecordingController
         AppSettings settings = SettingsStore.Settings;
         DebugHelper.WriteLine("Starting native screen recording. H.264/AAC MP4");
 
-        var selection = await RegionCaptureTasks.GetRectangleRegionAsync(settings.RegionCaptureOptions);
+        // The recorder bar that follows lets the region be adjusted, so the selection itself needs no confirmation.
+        RegionCaptureOptions regionOptions = settings.RegionCaptureOptions.Copy();
+        regionOptions.QuickCapture = true;
+        var selection = await RegionCaptureTasks.GetRectangleRegionAsync(regionOptions);
         if (selection == null) return;
         Rectangle captureRectangle = Rectangle.Intersect(selection.Value.Rectangle, CaptureHelpers.GetScreenBounds());
         captureRectangle = CaptureHelpers.EvenRectangleSize(captureRectangle);

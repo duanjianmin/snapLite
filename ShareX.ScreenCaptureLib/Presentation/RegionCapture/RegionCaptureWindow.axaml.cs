@@ -78,6 +78,7 @@ public partial class RegionCaptureWindow : Window
     private TextBlock _pointerInfoText = null!;
     private Border _selectionInfoPanel = null!;
     private TextBlock _selectionInfoText = null!;
+    private Border _selectionActionBar = null!;
     private WriteableBitmap? _magnifierBitmap;
     private IReadOnlyList<SimpleWindowInfo> _windows = Array.Empty<SimpleWindowInfo>();
     private readonly Dictionary<SelectionResizeNodeKind, Border> _regionResizeNodes = [];
@@ -318,6 +319,7 @@ public partial class RegionCaptureWindow : Window
         _pointerInfoText = this.FindControl<TextBlock>("PointerInfoText")!;
         _selectionInfoPanel = this.FindControl<Border>("SelectionInfoPanel")!;
         _selectionInfoText = this.FindControl<TextBlock>("SelectionInfoText")!;
+        _selectionActionBar = this.FindControl<Border>("SelectionActionBar")!;
     }
 
     private void InitializeCaptureWorkspace()
@@ -577,6 +579,7 @@ public partial class RegionCaptureWindow : Window
         _magnifierPanel.IsVisible = showMagnifier || showInfo;
         UpdateHover(_lastPointerPoint);
         UpdateHud(_lastPointerPoint);
+        UpdateSelectionActions();
         _regionInputSurface.Focus();
     }
 
@@ -589,9 +592,12 @@ public partial class RegionCaptureWindow : Window
 
         _regionToolActive = false;
         _interaction = RegionInteraction.None;
-        _regionInputSurface.IsVisible = false;
+        // Keep a confirmed-later selection on screen while annotating, so it is clear what will be saved;
+        // input goes to the editor underneath.
+        bool keepSelection = IsAwaitingConfirmation() && HasValidSelection();
+        _regionInputSurface.IsVisible = keepSelection;
         _regionInputSurface.IsHitTestVisible = false;
-        _regionOverlay.IsVisible = false;
+        _regionOverlay.IsVisible = keepSelection;
         SetRegionResizeNodesVisible(false);
         _regionOverlay.HoverRectangle = default;
         _hoverCandidate = null;
@@ -600,6 +606,7 @@ public partial class RegionCaptureWindow : Window
         _annotationToolbar.ShowToolOptions = true;
         _magnifierPanel.IsVisible = false;
         _selectionInfoPanel.IsVisible = false;
+        UpdateSelectionActions();
         _editorWorkspace.Focus();
     }
 
@@ -692,6 +699,7 @@ public partial class RegionCaptureWindow : Window
         }
 
         SetRegionResizeNodesVisible(false);
+        UpdateSelectionActions();
         if (_interaction is RegionInteraction.Moving or RegionInteraction.Resizing)
         {
             _regionInputSurface.Cursor = CursorAssetLoader.GetClosedHandCursor(Math.Max(1, RenderScaling));
@@ -814,6 +822,7 @@ public partial class RegionCaptureWindow : Window
         {
             SetRegionResizeNodesVisible(HasValidSelection());
             UpdateHud(_lastPointerPoint);
+            UpdateSelectionActions();
         }
 
         e.Handled = true;
@@ -1112,6 +1121,7 @@ public partial class RegionCaptureWindow : Window
             UpdateRegionResizeNodePositions();
         }
         UpdateSelectionInfo();
+        UpdateSelectionActions();
     }
 
     private void ClearSelection()
@@ -1122,6 +1132,7 @@ public partial class RegionCaptureWindow : Window
         _regionOverlay.SelectionRectangle = default;
         SetRegionResizeNodesVisible(false);
         _selectionInfoPanel.IsVisible = false;
+        UpdateSelectionActions();
         UpdateHover(_lastPointerPoint);
     }
 
@@ -1419,6 +1430,57 @@ public partial class RegionCaptureWindow : Window
 
         AvaloniaCanvas.SetLeft(_selectionInfoPanel, x);
         AvaloniaCanvas.SetTop(_selectionInfoPanel, y);
+    }
+
+    /// <summary>Region captures wait for Enter, double-click or the confirm button unless QuickCapture is on.</summary>
+    private bool IsAwaitingConfirmation() => _request?.RegionCaptureOptions.QuickCapture == false;
+
+    /// <summary>
+    /// Shows cancel/confirm at the selection's bottom-right corner (outside it when there is room) while a
+    /// selection waits for confirmation and is not being dragged.
+    /// </summary>
+    private void UpdateSelectionActions()
+    {
+        bool visible = !_closing && IsAwaitingConfirmation() && HasValidSelection() && _interaction == RegionInteraction.None;
+        _selectionActionBar.IsVisible = visible;
+        if (!visible)
+        {
+            return;
+        }
+
+        _selectionActionBar.Measure(Size.Infinity);
+        Size bar = _selectionActionBar.DesiredSize;
+        double scale = Math.Max(1, RenderScaling);
+        Rect selection = _regionOverlay.SelectionRectangle;
+        Rect area = new Rect(selection.Left / scale, selection.Top / scale, selection.Width / scale, selection.Height / scale);
+        const double gap = 8;
+
+        double x = Math.Clamp(area.Right - bar.Width, 0, Math.Max(0, Bounds.Width - bar.Width));
+        double y = area.Bottom + gap;
+        if (y + bar.Height > Bounds.Height)
+        {
+            // No room below: inside the selection's bottom edge, or above it when the selection is too short.
+            y = area.Height >= bar.Height + 2 * gap ? area.Bottom - bar.Height - gap : area.Top - bar.Height - gap;
+            y = Math.Clamp(y, 0, Math.Max(0, Bounds.Height - bar.Height));
+        }
+
+        AvaloniaCanvas.SetLeft(_selectionActionBar, x);
+        AvaloniaCanvas.SetTop(_selectionActionBar, y);
+    }
+
+    private void OnSelectionConfirmClick(object? sender, RoutedEventArgs e)
+    {
+        e.Handled = true;
+        if (HasValidSelection())
+        {
+            Complete(_regionOverlay.SelectionRectangle);
+        }
+    }
+
+    private void OnSelectionCancelClick(object? sender, RoutedEventArgs e)
+    {
+        e.Handled = true;
+        CancelCapture();
     }
 
     private void PositionPanelNearPointer(Control panel, Point pointer, double offset)

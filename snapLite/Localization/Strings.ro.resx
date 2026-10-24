@@ -109,6 +109,9 @@
   <data name="Lite_RegionAnnotations" xml:space="preserve">
     <value>Adnotează după selectarea unei regiuni</value>
   </data>
+  <data name="Lite_RegionQuickCapture" xml:space="preserve">
+    <value>Salvează capturile de regiune imediat ce butonul mouse-ului este eliberat</value>
+  </data>
   <data name="Lite_RunningInTray" xml:space="preserve">
     <value>snapLite rulează în zona de notificare.</value>
   </data>

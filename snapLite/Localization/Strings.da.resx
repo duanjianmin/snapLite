@@ -109,6 +109,9 @@
   <data name="Lite_RegionAnnotations" xml:space="preserve">
     <value>Tilføj kommentarer efter valg af område</value>
   </data>
+  <data name="Lite_RegionQuickCapture" xml:space="preserve">
+    <value>Gem områdeskærmbilleder, så snart museknappen slippes</value>
+  </data>
   <data name="Lite_RunningInTray" xml:space="preserve">
     <value>snapLite kører i meddelelsesområdet.</value>
   </data>

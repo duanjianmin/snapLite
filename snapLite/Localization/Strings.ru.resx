@@ -109,6 +109,9 @@
   <data name="Lite_RegionAnnotations" xml:space="preserve">
     <value>Добавлять пометки после выбора области</value>
   </data>
+  <data name="Lite_RegionQuickCapture" xml:space="preserve">
+    <value>Сохранять снимок области сразу после отпускания кнопки мыши</value>
+  </data>
   <data name="Lite_RunningInTray" xml:space="preserve">
     <value>snapLite работает в области уведомлений.</value>
   </data>

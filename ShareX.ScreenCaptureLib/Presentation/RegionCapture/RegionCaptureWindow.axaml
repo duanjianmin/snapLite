@@ -111,6 +111,54 @@
             </Border>
         </Canvas>
 
+        <!-- Cancel/confirm next to the selection, when a capture waits for confirmation (QuickCapture off). -->
+        <Canvas>
+            <Border x:Name="SelectionActionBar"
+                    IsVisible="False"
+                    Padding="4"
+                    CornerRadius="6"
+                    Background="{DynamicResource ShareX.Brush.Background.Main}"
+                    BorderBrush="{DynamicResource ShareX.Brush.Border}"
+                    BorderThickness="1">
+                <Border.Styles>
+                    <Style Selector="Button.selection-action">
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Setter Property="Padding" Value="10,5"/>
+                        <Setter Property="MinHeight" Value="32"/>
+                    </Style>
+                    <Style Selector="Button.selection-action TextBlock.icon">
+                        <Setter Property="FontFamily" Value="{DynamicResource ShareX.FontFamily.Icon}"/>
+                        <Setter Property="FontSize" Value="16"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                    </Style>
+                    <Style Selector="Button.selection-action.confirm">
+                        <Setter Property="Background" Value="{DynamicResource ShareX.Brush.Accent.Start}"/>
+                        <Setter Property="Foreground" Value="{DynamicResource ShareX.Brush.Accent.Foreground}"/>
+                    </Style>
+                </Border.Styles>
+                <StackPanel Orientation="Horizontal" Spacing="4">
+                    <Button x:Name="SelectionCancelButton"
+                            Classes="selection-action"
+                            Click="OnSelectionCancelClick"
+                            ToolTip.Tip="Esc">
+                        <StackPanel Orientation="Horizontal" Spacing="6">
+                            <TextBlock Classes="icon" Text="{x:Static theming:LucideIcons.x}"/>
+                            <TextBlock VerticalAlignment="Center" Text="{x:Static localization:Strings.ScrollingCaptureWindow_Cancel}"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="SelectionConfirmButton"
+                            Classes="selection-action confirm"
+                            Click="OnSelectionConfirmClick"
+                            ToolTip.Tip="Enter">
+                        <StackPanel Orientation="Horizontal" Spacing="6">
+                            <TextBlock Classes="icon" Text="{x:Static theming:LucideIcons.check}"/>
+                            <TextBlock VerticalAlignment="Center" Text="{x:Static localization:Strings.ScrollingCaptureWindow_OK}"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Canvas>
+
         <!-- Capture host toolbar: rectangle selection plus the shared non-destructive editor tools. -->
         <Canvas>
             <Grid x:Name="CaptureToolbar"

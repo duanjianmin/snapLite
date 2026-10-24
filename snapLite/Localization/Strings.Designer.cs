@@ -52,6 +52,7 @@ namespace ShareX.Localization {
         public static string Lite_RecorderOptionsHint => ResourceManager.GetString("Lite_RecorderOptionsHint", resourceCulture);
         public static string Lite_RecordingSaved => ResourceManager.GetString("Lite_RecordingSaved", resourceCulture);
         public static string Lite_RegionAnnotations => ResourceManager.GetString("Lite_RegionAnnotations", resourceCulture);
+        public static string Lite_RegionQuickCapture => ResourceManager.GetString("Lite_RegionQuickCapture", resourceCulture);
         public static string Lite_RunningInTray => ResourceManager.GetString("Lite_RunningInTray", resourceCulture);
         public static string Lite_ScreenshotCopied => ResourceManager.GetString("Lite_ScreenshotCopied", resourceCulture);
         public static string Lite_ScreenshotSaved => ResourceManager.GetString("Lite_ScreenshotSaved", resourceCulture);

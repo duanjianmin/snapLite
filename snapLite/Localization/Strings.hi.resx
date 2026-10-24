@@ -109,6 +109,9 @@
   <data name="Lite_RegionAnnotations" xml:space="preserve">
     <value>क्षेत्र चुनने के बाद एनोटेट करें</value>
   </data>
+  <data name="Lite_RegionQuickCapture" xml:space="preserve">
+    <value>माउस बटन छोड़ते ही क्षेत्र स्क्रीनशॉट सहेजें</value>
+  </data>
   <data name="Lite_RunningInTray" xml:space="preserve">
     <value>snapLite सूचना क्षेत्र में चल रहा है।</value>
   </data>

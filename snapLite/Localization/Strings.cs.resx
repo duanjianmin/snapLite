@@ -109,6 +109,9 @@
   <data name="Lite_RegionAnnotations" xml:space="preserve">
     <value>Po výběru oblasti přidat poznámky</value>
   </data>
+  <data name="Lite_RegionQuickCapture" xml:space="preserve">
+    <value>Uložit snímek oblasti ihned po uvolnění tlačítka myši</value>
+  </data>
   <data name="Lite_RunningInTray" xml:space="preserve">
     <value>snapLite běží v oznamovací oblasti.</value>
   </data>

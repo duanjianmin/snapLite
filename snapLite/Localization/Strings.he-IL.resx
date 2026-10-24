@@ -109,6 +109,9 @@
   <data name="Lite_RegionAnnotations" xml:space="preserve">
     <value>הוספת הערות לאחר בחירת אזור</value>
   </data>
+  <data name="Lite_RegionQuickCapture" xml:space="preserve">
+    <value>שמירת צילום אזור מיד עם שחרור לחצן העכבר</value>
+  </data>
   <data name="Lite_RunningInTray" xml:space="preserve">
     <value>snapLite פועל באזור ההודעות.</value>
   </data>

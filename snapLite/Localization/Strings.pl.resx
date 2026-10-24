@@ -109,6 +109,9 @@
   <data name="Lite_RegionAnnotations" xml:space="preserve">
     <value>Dodaj adnotacje po zaznaczeniu obszaru</value>
   </data>
+  <data name="Lite_RegionQuickCapture" xml:space="preserve">
+    <value>Zapisuj zrzut obszaru od razu po zwolnieniu przycisku myszy</value>
+  </data>
   <data name="Lite_RunningInTray" xml:space="preserve">
     <value>snapLite działa w obszarze powiadomień.</value>
   </data>

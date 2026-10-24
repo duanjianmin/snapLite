@@ -109,6 +109,9 @@
   <data name="Lite_RegionAnnotations" xml:space="preserve">
     <value>Annoter après la sélection d'une zone</value>
   </data>
+  <data name="Lite_RegionQuickCapture" xml:space="preserve">
+    <value>Enregistrer les captures de zone dès que le bouton de la souris est relâché</value>
+  </data>
   <data name="Lite_RunningInTray" xml:space="preserve">
     <value>snapLite s'exécute dans la zone de notification.</value>
   </data>

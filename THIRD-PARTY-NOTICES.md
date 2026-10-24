@@ -6,7 +6,7 @@ snapLite (极简录屏) is licensed under the GNU General Public License v3 (see
 
 | Component | Version | License | License text / source |
 |---|---|---|---|
-| ShareX (the code this project is based on) | 22.0 source | GPL v3 | `Licenses/ShareX_license.txt`, https://github.com/ShareX/ShareX |
+| ShareX (the code this project is based on) | develop @ 254870479 (22.0.0 + 18 commits) | GPL v3 | `Licenses/ShareX_license.txt`, https://github.com/ShareX/ShareX |
 | .NET runtime and libraries (in self-contained builds), System.Drawing.Common, System.Security.Cryptography.ProtectedData, System.Windows.Extensions, Microsoft.Win32.SystemEvents | 10.0.13 | MIT | `Licenses/dotnet_license.txt`, `Licenses/dotnet_third-party-notices.txt`, https://github.com/dotnet/runtime |
 | Avalonia, Avalonia.Skia, Avalonia.Win32, Avalonia.HarfBuzz, Avalonia.Themes.Fluent, Avalonia.Controls.ColorPicker | 12.1.4 | MIT | `Licenses/Avalonia_license.txt`, https://github.com/AvaloniaUI/Avalonia |
 | ANGLE (Avalonia.Angle.Windows.Natives, `av_libglesv2.dll`) | 2.1.27548 | BSD 3-Clause | `Licenses/ANGLE_license.txt`, https://chromium.googlesource.com/angle/angle |

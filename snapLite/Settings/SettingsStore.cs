@@ -64,7 +64,7 @@ public static class SettingsStore
             try { File.Copy(SettingsPath, SettingsPath + ".bad", true); } catch { }
             Settings = new AppSettings();
         }
-        Settings.UpgradeHotkeyDefaults();
+        Settings.UpgradeDefaults();
     }
 
     public static void Save()
