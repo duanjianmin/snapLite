@@ -50,7 +50,7 @@ public sealed class AppSettings
     private const int CurrentHotkeyDefaults = 2;
 
     /// <summary>Raise when another default changes; see <see cref="UpgradeDefaults"/>.</summary>
-    private const int CurrentSettingsVersion = 1;
+    private const int CurrentSettingsVersion = 2;
 
     // Screenshots
     public string ScreenshotsFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyPictures), AppInfo.Id);
@@ -110,6 +110,12 @@ public sealed class AppSettings
             // 1.0.0 saved region captures as soon as the mouse was released.
             RegionCaptureOptions.QuickCapture = false;
         }
+        if (SettingsVersion < 2)
+        {
+            // 1.0.x started recording without a countdown.
+            Recorder.ScreenRecordStartDelayEnabled = true;
+            Recorder.ScreenRecordStartDelay = 3f;
+        }
         SettingsVersion = CurrentSettingsVersion;
     }
 
@@ -148,7 +154,8 @@ public sealed class RecorderSettings
     public bool ScreenRecordMouseHighlighter = false;
     public bool ScreenRecordShowTimer = true;
     public bool ScreenRecordShowButtonLabels = false;
-    public bool ScreenRecordStartDelayEnabled = false;
+    // A 3 second countdown in the middle of the screen gives time to get ready; it also covers the camera warm-up.
+    public bool ScreenRecordStartDelayEnabled = true;
     public float ScreenRecordStartDelay = 3f;
     public bool ScreenRecordFixedDuration = false;
     public float ScreenRecordDuration = 3f;

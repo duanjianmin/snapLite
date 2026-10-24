@@ -225,7 +225,11 @@ public static class RecordingController
                 if (delay > 0)
                 {
                     form.InvokeSafe(() => form.StartCountdown(delay));
+                    RecordingCountdownWindow.Handle countdown = RecordingCountdownWindow.Show(delay, form.RecordingRegion);
                     form.RecordResetEvent.WaitOne(delay);
+                    // Stop/abort during the countdown cancels it; the countdown ending (or Start) begins recording.
+                    if (form.Status is ScreenRecordingStatus.Aborted or ScreenRecordingStatus.Stopped || form.RestartRequested) countdown.Cancel();
+                    else countdown.Start();
                 }
                 form.ConsumeRestartRequest();
                 if (form.Status is ScreenRecordingStatus.Aborted or ScreenRecordingStatus.Stopped) return true;

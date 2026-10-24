@@ -58,6 +58,8 @@ internal partial class ScreenRecorderBarWindow : Window
     private readonly TaskCompletionSource<bool> _completion = new(TaskCreationOptions.RunContinuationsAsynchronously);
     private readonly Button _recordButton;
     private ToggleButton _startDelayToggle = null!;
+    private ContextMenu? _startDelayMenu;
+    private long _startDelayMenuClosedAt;
     private ScrollingCaptureRegionWindow? _regionWindow;
     private string? _activePanel;
     private bool _closed;
@@ -239,6 +241,15 @@ internal partial class ScreenRecorderBarWindow : Window
 
     private void ShowStartDelayMenu(Control target)
     {
+        // The arrow toggles the menu. A click on it while the menu is open first light-dismisses the menu on
+        // press; that same click must not reopen it on release.
+        if (_startDelayMenu?.IsOpen == true)
+        {
+            _startDelayMenu.Close();
+            return;
+        }
+        if (Environment.TickCount64 - _startDelayMenuClosedAt < 300) return;
+
         ClosePanel();
         List<MenuItem> items = [];
         for (int seconds = 1; seconds <= 5; seconds++)
@@ -254,6 +265,8 @@ internal partial class ScreenRecorderBarWindow : Window
             items.Add(item);
         }
         ContextMenu menu = new() { ItemsSource = items, Placement = PlacementMode.BottomEdgeAlignedLeft };
+        menu.Closed += (_, _) => _startDelayMenuClosedAt = Environment.TickCount64;
+        _startDelayMenu = menu;
         menu.Open(target);
     }
 
