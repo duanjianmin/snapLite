@@ -176,7 +176,7 @@ namespace ShareX.ScreenCaptureLib
                         if (lastScreenshot != null)
                         {
                             int expectedHeight = (int)(pixelsPerNotch * notchesBehindCapture);
-                            Bitmap newResult = await CombineImagesAsync(Result, lastScreenshot, expectedHeight);
+                            Bitmap newResult = await CombineImagesAsync(Result, lastScreenshot, previousScreenshot, expectedHeight);
 
                             if (newResult != null)
                             {
@@ -308,15 +308,78 @@ namespace ShareX.ScreenCaptureLib
         {
             if (lastScreenshot != null && previousScreenshot != null)
             {
-                return SkiaImageHelpers.CompareImages(lastScreenshot, previousScreenshot);
+                return AreNearlyIdentical(lastScreenshot, previousScreenshot);
             }
 
             return false;
         }
 
-        private async Task<Bitmap> CombineImagesAsync(Bitmap result, Bitmap currentImage, int expectedHeight)
+        /// <summary>
+        /// The end of the content: two captures are the same apart from a sliver of pixels. Exact equality is never
+        /// reached under a live widget (a network-speed ball, a clock) that changes between captures.
+        /// </summary>
+        private static unsafe bool AreNearlyIdentical(Bitmap first, Bitmap second)
         {
-            return await Task.Run(() => CombineImages(result, currentImage, expectedHeight) ?? (expectedHeight > 0 ? CombineImages(result, currentImage, 0) : null));
+            if (first.Width != second.Width || first.Height != second.Height)
+            {
+                return false;
+            }
+
+            using SkiaPixelBuffer a = new(first, true, PixelAccess.ReadOnly);
+            using SkiaPixelBuffer b = new(second, true, PixelAccess.ReadOnly);
+            uint* pa = (uint*)a.Pointer;
+            uint* pb = (uint*)b.Pointer;
+            long total = (long)first.Width * first.Height;
+            long allowed = Math.Max(16, total / 1000);
+            long different = 0;
+            for (long i = 0; i < total; i++)
+            {
+                if (pa[i] != pb[i] && ++different > allowed)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private async Task<Bitmap> CombineImagesAsync(Bitmap result, Bitmap currentImage, Bitmap previousImage, int expectedHeight)
+        {
+            return await Task.Run(() => CombineImages(result, currentImage, previousImage, expectedHeight) ??
+                (expectedHeight > 0 ? CombineImages(result, currentImage, previousImage, 0) : null));
+        }
+
+        /// <summary>
+        /// Compares a stitched row with a row of the new capture, skipping pixels that did not move between the two
+        /// captures (floating widgets, desktop overlays, sticky headers, plain background): they are not part of the
+        /// scrolled content and would break the true alignment. A few differing pixels are tolerated for widgets
+        /// whose text changes between captures.
+        /// </summary>
+        /// <returns>1 when the rows match, 0 when too little moved to tell, -1 when they differ.</returns>
+        private static unsafe int CompareRowsIgnoringStatic(uint* resultRow, uint* currentRow, bool* staticAtCurrentRow, bool* staticAtResultRow, int width)
+        {
+            int compared = 0;
+            int different = 0;
+            for (int x = 0; x < width; x++)
+            {
+                if (staticAtCurrentRow[x] || (staticAtResultRow != null && staticAtResultRow[x]))
+                {
+                    continue;
+                }
+
+                compared++;
+                if (resultRow[x] != currentRow[x])
+                {
+                    different++;
+                }
+            }
+
+            if (compared < 8)
+            {
+                return 0;
+            }
+
+            return different <= Math.Max(2, compared / 50) ? 1 : -1;
         }
 
         private static unsafe int CompareRows(IntPtr first, IntPtr second, int count)
@@ -326,7 +389,7 @@ namespace ShareX.ScreenCaptureLib
         /// How many new rows the scroll should have revealed, or 0 when unknown. Repetitive content (identical text
         /// lines, blank space, table rows) matches at several offsets; only offsets near the expected one count.
         /// </param>
-        private unsafe Bitmap CombineImages(Bitmap result, Bitmap currentImage, int expectedHeight)
+        private unsafe Bitmap CombineImages(Bitmap result, Bitmap currentImage, Bitmap previousImage, int expectedHeight)
         {
             if (result == null)
             {
@@ -337,32 +400,47 @@ namespace ShareX.ScreenCaptureLib
 
             int matchCount = 0;
             int matchIndex = 0;
-            int matchLimit = currentImage.Height / 2;
 
             int ignoreSideOffset = Math.Max(50, currentImage.Width / 20);
             ignoreSideOffset = Math.Min(ignoreSideOffset, currentImage.Width / 3);
 
-            Rectangle rect = new Rectangle(ignoreSideOffset, result.Height - currentImage.Height, currentImage.Width - ignoreSideOffset * 2, currentImage.Height);
+            if (previousImage == null || previousImage.Width != currentImage.Width || previousImage.Height != currentImage.Height)
+            {
+                status = ScrollingCaptureStatus.Failed;
+                return null;
+            }
 
-            using SkiaPixelBuffer bdResult = new(result, true, PixelAccess.ReadOnly);
+            // Align the new capture with the previous capture, not with the stitched result: the result's older rows
+            // were stitched from earlier captures, where a floating widget sat over different content. The bottom of
+            // the result is the previous capture, so its row R is result row R + (result height - capture height).
+            int width = currentImage.Width;
+            int height = currentImage.Height;
+            int maskWidth = width - ignoreSideOffset * 2;
+            using SkiaPixelBuffer bdPrevious = new(previousImage, true, PixelAccess.ReadOnly);
             using SkiaPixelBuffer bdCurrentImage = new(currentImage, true, PixelAccess.ReadOnly);
-            int stride = result.Width * 4;
-            int pixelSize = stride / result.Width;
-            IntPtr resultScan0 = (IntPtr)bdResult.Pointer + pixelSize * ignoreSideOffset;
-            IntPtr currentImageScan0 = (IntPtr)bdCurrentImage.Pointer + pixelSize * ignoreSideOffset;
-            int compareLength = pixelSize * rect.Width;
+            uint* previous = (uint*)bdPrevious.Pointer + ignoreSideOffset;
+            uint* current = (uint*)bdCurrentImage.Pointer + ignoreSideOffset;
 
-            int ignoreBottomOffsetMax = currentImage.Height / 3;
-            int ignoreBottomOffset = Math.Max(50, currentImage.Height / 10);
+            // Pixels identical at the same screen position in both captures did not scroll (widgets, overlays,
+            // sticky headers, plain background).
+            bool[] staticMask = new bool[height * maskWidth];
+            for (int y = 0; y < height; y++)
+            {
+                for (int x = 0; x < maskWidth; x++)
+                {
+                    staticMask[y * maskWidth + x] = previous[y * width + x] == current[y * width + x];
+                }
+            }
+
+            int ignoreBottomOffsetMax = height / 3;
+            int ignoreBottomOffset = Math.Max(50, height / 10);
 
             if (Options.AutoIgnoreBottomEdge)
             {
-                IntPtr resultScan0Last = resultScan0 + (result.Height - 1) * stride;
-                IntPtr currentImageScan0Last = currentImageScan0 + (currentImage.Height - 1) * stride;
-
                 for (int i = 0; i <= ignoreBottomOffsetMax; i++)
                 {
-                    if (CompareRows(resultScan0Last - i * stride, currentImageScan0Last - i * stride, compareLength) != 0)
+                    int row = height - 1 - i;
+                    if (CompareRows((IntPtr)(previous + row * width), (IntPtr)(current + row * width), maskWidth * 4) != 0)
                     {
                         ignoreBottomOffset += i;
                         break;
@@ -374,35 +452,63 @@ namespace ShareX.ScreenCaptureLib
 
             ignoreBottomOffset = Math.Min(ignoreBottomOffset, ignoreBottomOffsetMax);
 
-            int rectBottom = rect.Bottom - ignoreBottomOffset - 1;
+            // The previous capture's row that the new capture's row currentImageY must continue.
+            int previousBottom = height - ignoreBottomOffset - 1;
 
             int tolerance = expectedHeight / 3 + 20;
 
-            for (int currentImageY = currentImage.Height - 1; currentImageY >= 0 && matchCount < matchLimit; currentImageY--)
+            // Every candidate alignment must agree over its whole overlap. A run of matching rows is not enough:
+            // repetitive content (lists, blank space, repeated headings) matches at wrong offsets for a while, and
+            // the last scroll before the end moves less than expected, so the nearest plausible offset can be wrong.
+            int bestScore = int.MinValue;
+            int bestDistance = int.MaxValue;
+            fixed (bool* mask = staticMask)
             {
-                if (expectedHeight > 0 && Math.Abs(currentImage.Height - currentImageY - 1 - ignoreBottomOffset - expectedHeight) > tolerance)
+                for (int currentImageY = height - 1; currentImageY >= 0; currentImageY--)
                 {
-                    continue;
-                }
-
-                int currentMatchCount = 0;
-
-                for (int y = 0; currentImageY - y >= 0 && currentMatchCount < matchLimit; y++)
-                {
-                    if (CompareRows(resultScan0 + ((rectBottom - y) * stride), currentImageScan0 + ((currentImageY - y) * stride), compareLength) == 0)
+                    int added = height - currentImageY - 1 - ignoreBottomOffset;
+                    if (expectedHeight > 0 && Math.Abs(added - expectedHeight) > tolerance)
                     {
-                        currentMatchCount++;
+                        continue;
                     }
-                    else
-                    {
-                        break;
-                    }
-                }
 
-                if (currentMatchCount > matchCount)
-                {
-                    matchCount = currentMatchCount;
-                    matchIndex = currentImageY;
+                    int matched = 0;
+                    int mismatched = 0;
+                    for (int y = 0; currentImageY - y >= 0; y++)
+                    {
+                        int previousRow = previousBottom - y;
+                        if (previousRow < 0)
+                        {
+                            break;
+                        }
+
+                        int currentRow = currentImageY - y;
+                        int compare = CompareRowsIgnoringStatic(previous + previousRow * width, current + currentRow * width,
+                            mask + currentRow * maskWidth, mask + previousRow * maskWidth, maskWidth);
+                        if (compare > 0)
+                        {
+                            matched++;
+                        }
+                        else if (compare < 0 && ++mismatched > 3 + matched / 50)
+                        {
+                            break;
+                        }
+                    }
+
+                    if (matched < 12 || mismatched > 3 + matched / 50)
+                    {
+                        continue;
+                    }
+
+                    int score = matched - 20 * mismatched;
+                    int distance = expectedHeight > 0 ? Math.Abs(added - expectedHeight) : 0;
+                    if (score > bestScore || (score == bestScore && distance < bestDistance))
+                    {
+                        bestScore = score;
+                        bestDistance = distance;
+                        matchCount = matched;
+                        matchIndex = currentImageY;
+                    }
                 }
             }
 

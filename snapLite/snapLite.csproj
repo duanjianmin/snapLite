@@ -9,7 +9,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <Product>snapLite</Product>
     <!-- The app's own release version; the ShareX libraries keep ShareX's version from Directory.build.props. -->
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Description>snapLite 极简录屏</Description>
     <!-- The libraries keep the ShareX Team metadata from Directory.build.props; this app is the fork. -->
     <Company>snapLite contributors</Company>
